@@ -1,1 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Game development and QA portfolio project showcasing gameplay, testing, debugging, bug reports, architecture, and technical implementation." />
+  <title>Project Name — QA / Game Tester Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top">PROJECT NAME</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#gameplay">Gameplay</a>
+        <a href="#testing">QA</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#gallery">Gallery</a>
+      </nav>
+    </div>
+  </header>
 
+  <main id="top">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">GAME DEVELOPMENT + QA CASE STUDY</p>
+          <h1>PROJECT NAME</h1>
+          <p class="hero-summary">
+            A short one-sentence description of your game and its main gameplay idea.
+            Keep this easy to understand for recruiters and hiring managers.
+          </p>
+
+          <div class="project-meta">
+            <div><span>Role</span><strong>Developer / QA Tester</strong></div>
+            <div><span>Engine</span><strong>Your Engine</strong></div>
+            <div><span>Language</span><strong>Your Language</strong></div>
+            <div><span>Platform</span><strong>Windows</strong></div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button primary" href="#testing">View QA Work</a>
+            <a class="button secondary" href="https://github.com/YOUR-USERNAME/YOUR-REPOSITORY" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+          </div>
+        </div>
+
+        <figure class="hero-media media-card">
+          <img src="assets/images/hero.png" alt="Main gameplay screenshot from Project Name" data-lightbox />
+          <figcaption>Replace <code>hero.png</code> with your strongest gameplay screenshot.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="about" class="section alt">
+      <div class="container narrow">
+        <p class="eyebrow">ABOUT THE PROJECT</p>
+        <h2>What is this game?</h2>
+        <p class="lead">
+          Write a brief introduction here. Explain the genre, core gameplay loop, objective,
+          and what makes the project interesting. Aim for one or two short paragraphs.
+        </p>
+        <p>
+          Also explain what you personally worked on. For QA applications, mention that building
+          the project gave you experience with implementation, debugging, reproducing defects,
+          investigating root causes, and verifying fixes.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">TECHNOLOGIES</p>
+        <h2>Tools & technologies</h2>
+        <div class="chip-grid">
+          <span>Your Engine</span>
+          <span>C++ / C#</span>
+          <span>Git</span>
+          <span>GitHub</span>
+          <span>Visual Studio</span>
+          <span>Blender</span>
+          <span>Jira / Trello</span>
+          <span>Windows</span>
+        </div>
+        <p class="section-note">Delete anything you did not actually use and add the tools you did.</p>
+      </div>
+    </section>
+
+    <section id="gameplay" class="section alt">
+      <div class="container">
+        <p class="eyebrow">GAMEPLAY</p>
+        <h2>Core gameplay</h2>
+
+        <div class="feature-row">
+          <div class="media-card">
+            <video autoplay muted loop playsinline controls>
+              <source src="assets/videos/gameplay.mp4" type="video/mp4" />
+              Your browser does not support HTML video.
+            </video>
+          </div>
+          <div>
+            <h3>Core gameplay loop</h3>
+            <p>
+              Explain what the player is doing in this clip, what system is being demonstrated,
+              and what your contribution was.
+            </p>
+            <ul>
+              <li>What the player can do</li>
+              <li>What you implemented</li>
+              <li>Why this feature matters</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feature-row reverse">
+          <div class="media-card">
+            <img src="assets/images/gameplay-01.png" alt="Gameplay feature screenshot" data-lightbox />
+          </div>
+          <div>
+            <h3>Feature or system #1</h3>
+            <p>
+              Example: enemy AI, inventory, interaction system, combat, procedural generation,
+              movement, save/load, quests, UI, or another important system.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-row">
+          <div class="media-card">
+            <img src="assets/images/gameplay-02.png" alt="Second gameplay feature screenshot" data-lightbox />
+          </div>
+          <div>
+            <h3>Feature or system #2</h3>
+            <p>
+              Keep this focused. One strong screenshot plus a concise explanation is better than
+              dumping every feature into one giant wall of text.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testing" class="section">
+      <div class="container">
+        <p class="eyebrow">QUALITY ASSURANCE</p>
+        <h2>Testing approach</h2>
+        <p class="lead">
+          This section should show employers that you test methodically instead of only playing
+          until something catches fire.
+        </p>
+
+        <div class="qa-cards">
+          <article class="card">
+            <h3>Functional Testing</h3>
+            <p>Validated gameplay systems against intended behaviour and design requirements.</p>
+          </article>
+          <article class="card">
+            <h3>Exploratory Testing</h3>
+            <p>Used unusual inputs and unexpected player behaviour to uncover hidden defects.</p>
+          </article>
+          <article class="card">
+            <h3>Regression Testing</h3>
+            <p>Retested related systems after fixes to make sure changes did not break existing behaviour.</p>
+          </article>
+          <article class="card">
+            <h3>Boundary & Edge Cases</h3>
+            <p>Tested transitions, limits, collision edges, invalid states, and rapid repeated inputs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <p class="eyebrow">BUG CASE STUDY</p>
+        <h2>Bug → investigation → verification</h2>
+
+        <div class="bug-layout">
+          <div class="media-card">
+            <video muted loop playsinline controls>
+              <source src="assets/videos/bug-example.mp4" type="video/mp4" />
+            </video>
+            <p class="caption">Short clip showing the defect being reproduced.</p>
+          </div>
+
+          <article class="bug-report">
+            <div class="bug-header">
+              <span class="bug-id">BUG-001</span>
+              <span class="severity">MAJOR</span>
+            </div>
+            <h3>Replace with a real bug title</h3>
+
+            <dl>
+              <dt>Environment</dt>
+              <dd>Windows 11 • Build 0.0.0</dd>
+
+              <dt>Reproduction rate</dt>
+              <dd>10 / 10</dd>
+
+              <dt>Preconditions</dt>
+              <dd>Describe any setup required before reproducing the issue.</dd>
+
+              <dt>Steps to reproduce</dt>
+              <dd>
+                <ol>
+                  <li>Perform the first action.</li>
+                  <li>Perform the second action.</li>
+                  <li>Trigger the defect.</li>
+                </ol>
+              </dd>
+
+              <dt>Expected result</dt>
+              <dd>Describe the correct expected behaviour.</dd>
+
+              <dt>Actual result</dt>
+              <dd>Describe what actually happens.</dd>
+            </dl>
+          </article>
+        </div>
+
+        <div class="feature-row">
+          <div class="media-card">
+            <img src="assets/images/debugging.png" alt="Debugging view showing investigation of a defect" data-lightbox />
+          </div>
+          <div>
+            <p class="eyebrow">INVESTIGATION</p>
+            <h3>Root cause</h3>
+            <p>
+              Explain how you narrowed down the issue. Mention logs, breakpoints, collision
+              visualization, state inspection, reproduction patterns, or other evidence you used.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-row reverse">
+          <div class="media-card">
+            <video muted loop playsinline controls>
+              <source src="assets/videos/bug-fixed.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div>
+            <p class="eyebrow">VERIFICATION</p>
+            <h3>Fix verified</h3>
+            <p>
+              Explain how you retested the original reproduction steps and which related systems
+              you regression-tested after the fix.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">TEST CASES</p>
+        <h2>Representative test coverage</h2>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Test</th>
+                <th>Expected Result</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>TC-01</td>
+                <td>Basic player action</td>
+                <td>Action completes normally</td>
+                <td><span class="status pass">PASS</span></td>
+              </tr>
+              <tr>
+                <td>TC-02</td>
+                <td>Action against collision boundary</td>
+                <td>No invalid movement or state change</td>
+                <td><span class="status pass">PASS</span></td>
+              </tr>
+              <tr>
+                <td>TC-03</td>
+                <td>Rapid repeated input</td>
+                <td>System remains stable</td>
+                <td><span class="status pass">PASS</span></td>
+              </tr>
+              <tr>
+                <td>TC-04</td>
+                <td>Invalid state transition</td>
+                <td>Action is safely rejected</td>
+                <td><span class="status pass">PASS</span></td>
+              </tr>
+              <tr>
+                <td>TC-05</td>
+                <td>Regression after bug fix</td>
+                <td>Original defect does not return</td>
+                <td><span class="status pass">PASS</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="architecture" class="section alt">
+      <div class="container">
+        <p class="eyebrow">TECHNICAL UNDERSTANDING</p>
+        <h2>Architecture & UML</h2>
+        <p class="lead">
+          Keep this diagram readable. Explain the important relationships rather than every class
+          in the project.
+        </p>
+
+        <figure class="media-card uml">
+          <img src="assets/images/uml.png" alt="UML diagram showing the project's architecture" data-lightbox />
+          <figcaption>Click the diagram to enlarge it.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="container">
+        <p class="eyebrow">GALLERY</p>
+        <h2>Project screenshots</h2>
+
+        <div class="gallery">
+          <img src="assets/images/gallery-01.png" alt="Project screenshot 1" data-lightbox />
+          <img src="assets/images/gallery-02.png" alt="Project screenshot 2" data-lightbox />
+          <img src="assets/images/gallery-03.png" alt="Project screenshot 3" data-lightbox />
+          <img src="assets/images/gallery-04.png" alt="Project screenshot 4" data-lightbox />
+          <img src="assets/images/gallery-05.png" alt="Project screenshot 5" data-lightbox />
+          <img src="assets/images/gallery-06.png" alt="Project screenshot 6" data-lightbox />
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <div class="container narrow">
+        <p class="eyebrow">SOURCE CODE</p>
+        <h2>Want to see how it works?</h2>
+        <p>
+          View the repository for source code, implementation details, commits, and additional documentation.
+        </p>
+        <a class="button primary" href="https://github.com/YOUR-USERNAME/YOUR-REPOSITORY" target="_blank" rel="noopener noreferrer">
+          View on GitHub
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> YOUR NAME</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close image viewer">×</button>
+    <img id="lightboxImage" alt="" />
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
