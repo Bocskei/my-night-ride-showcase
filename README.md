@@ -1,104 +1,69 @@
-# QA / Game Tester Project Portfolio
+# My Night Ride Portfolio
 
-A static GitHub Pages portfolio designed to showcase a game project while emphasizing QA/testing skills.
+Replace your existing `index.html`, `css/style.css`, and `js/main.js`.
 
-## 1. Replace the placeholder text
+## Already filled in
+- My Night Ride
+- Unity / C#
+- Android / Mobile
+- Solo project
+- 2026 – Present
+- In development
+- Wave-based ball-and-brick gameplay
+- Rival cars
+- Overworld progression
+- Upgrades / persistence
+- Dialogue / async flows
+- GameServices
+- UpdateManager
+- IUpdateObserver / IFixedUpdateObserver
+- GameplayInputRouter / PlayerController separation
+- UpgradeService
+- GameplayPauseService
+- LevelStateController
+- UniTask
+- Unity Console / stack traces / Android Logcat
+- Real integration/regression areas already encountered
 
-Open `index.html` and replace:
+## Remaining TODOs
+Search `index.html` for `[TODO`.
 
-- `PROJECT NAME`
-- `YOUR NAME`
-- `YOUR-USERNAME`
-- `YOUR-REPOSITORY`
-- Engine/language/platform information
-- Project introduction
-- Feature descriptions
-- QA/testing descriptions
-- Bug report
-- Test cases
-- Root cause and verification notes
+Most important:
+1. Final genre wording
+2. Final one-sentence description
+3. Your name
+4. Additional tools/libraries if desired
+5. Real Representative Test Coverage results
+6. Current milestone / next development focus
+7. Actual media filenames if different
 
-## 2. Add your PNG screenshots
+## Expected media
+Images:
+- hero-01.gif
+- hero-02.gif
+- overview-01.png
+- overview-02.png
+- ball-gameplay.png
+- overworld.png
+- dialogue.png
+- testing-debug.png
+- uml-services.png
+- uml-update-manager.png
+- uml-level-flow.png
 
-Put your PNG files in:
+Videos:
+- gameplay-waves.mp4
+- rival-cars.mp4
 
-`assets/images/`
+## UML
+You do not need one full-project UML. Recommended focused diagrams:
+- Services / GameServices
+- UpdateManager / observer interfaces
+- LevelStateController / level flow
 
-The current HTML expects these filenames:
-
-- `hero.png`
-- `gameplay-01.png`
-- `gameplay-02.png`
-- `debugging.png`
-- `uml.png`
-- `gallery-01.png`
-- `gallery-02.png`
-- `gallery-03.png`
-- `gallery-04.png`
-- `gallery-05.png`
-- `gallery-06.png`
-
-You can rename your real screenshots to match these names, or change the filenames inside `index.html`.
-
-## 3. Add short videos
-
-Put MP4 files in:
-
-`assets/videos/`
-
-Expected filenames:
-
-- `gameplay.mp4`
-- `bug-example.mp4`
-- `bug-fixed.mp4`
-
-Short 5–15 second clips work well.
-
-## 4. Preview locally
-
-The simplest option is VS Code + the Live Server extension.
-
-You can also open `index.html` directly in a browser, but a local server is more reliable.
-
-## 5. Push to GitHub
-
+## Commit
 ```bash
 git add .
-git commit -m "Create QA project portfolio"
+git commit -m "Add My Night Ride project content"
 git push
 ```
-
-## 6. Enable GitHub Pages
-
-On GitHub:
-
-1. Open the repository.
-2. Go to **Settings**.
-3. Open **Pages**.
-4. Choose **Deploy from a branch**.
-5. Select `main`.
-6. Select `/ (root)`.
-7. Save.
-
-GitHub will provide the public site URL.
-
-## Recommended content order
-
-1. Hero / strongest screenshot
-2. About the game
-3. Technologies
-4. Core gameplay
-5. Features you developed
-6. Testing approach
-7. Bug report
-8. Reproduction video
-9. Investigation/root cause
-10. Fix verification
-11. Test cases
-12. UML / architecture
-13. Gallery
-14. GitHub link
-
-## Portfolio tip
-
-For QA applications, use real examples whenever possible. A genuine defect with clear reproduction steps, evidence, investigation, and verification is far stronger than generic text about "attention to detail".

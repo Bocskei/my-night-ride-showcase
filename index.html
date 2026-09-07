@@ -1,568 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Game project portfolio showcasing gameplay systems, testing, technical architecture, and development work."
-  />
-  <title>My Night Ride - Game Project</title>
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="My Night Ride — a Unity mobile game project showcasing gameplay systems, testing, architecture, and development work.">
+<title>My Night Ride — Game Project Portfolio</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="#top">My Night Ride</a>
-
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#systems">Systems</a>
-        <a href="#testing">Testing</a>
-        <a href="#coverage">Test Coverage</a>
-        <a href="#architecture">Architecture</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="top">
-    <!-- HERO -->
-    <section class="section hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">GAME PROJECT SHOWCASE</p>
-
-          <h1>My Night Ride</h1>
-
-          <p class="hero-summary">
-            From the mechanics, I could describe it as an arcade/action game 
-            with Breakout-style ball-and-brick gameplay and a racing/chase theme, 
-            but I want your preferred genre rather than assigning one.
-          </p>
-
-          <div class="project-meta">
-            <div>
-              <span>Engine</span>
-              <strong>Unity 6</strong>
-            </div>
-
-            <div>
-              <span>Language</span>
-              <strong>C#</strong>
-            </div>
-
-            <div>
-              <span>Platform</span>
-              <strong>Android / iOS / Mobile</strong>
-            </div>
-
-            <div>
-              <span>Status</span>
-              <strong>In Development</strong>
-            </div>
-          </div>
-
-          <a class="button primary" href="#testing">Explore the Project</a>
-        </div>
-
-        <div class="main-showcase-gifs">
-          <figure class="media-card hero-media">
-            <img
-              src="assets/images/main-showcase-01.gif"
-              alt="Gameplay preview from My Night Ride"
-            />
-            <figcaption>Gameplay preview.</figcaption>
-          </figure>
-
-          <figure class="media-card hero-media">
-            <img
-              src="assets/images/main-showcase-02.gif"
-              alt="Second gameplay preview from My Night Ride"
-            />
-            <figcaption>Gameplay preview.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section alt">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">ABOUT THE PROJECT</p>
-          <h2>What is the game?</h2>
-        </div>
-
-        <div class="two-column">
-          <div>
-            <p class="lead">
-              My Night Ride is a mobile game built independently in Unity and C#. 
-              Its core gameplay combines car movement with ball-based brick destruction across multi-wave levels. 
-              The player controls a car horizontally, launches balls through touch input, 
-              clears waves of destructible obstacles, manages limited lives and completes levels before the race timer expires.
-
-              Levels consist of multiple waves rather than isolated single-screen stages. 
-              Clearing a wave triggers a transition into the next section, 
-              while completing the full level leads into an outro and returns the player to an overworld progression system. 
-              Gameplay also includes rival cars, power-ups, score and combo systems, dialogue sequences, 
-              level ratings/rewards, and persistent upgrades.
-
-              Outside individual levels, the game has an overworld where levels are selected and unlocked through progression. 
-              Persistent systems include currency, upgrades, unlock state and regenerating overworld lives. 
-              The upgrade shop modifies gameplay values such as car speed and other player/ball attributes, 
-              with progression stored between sessions.
-
-              The project has been developed as interconnected but separated C# systems rather than 
-              putting the game's behaviour into a small number of large MonoBehaviours. 
-              Examples include services for progression, upgrades, lives, balls, rivals, dialogue, 
-              pausing, race timing and other gameplay state, with event-driven communication used where appropriate.
-              The project also uses asynchronous flows for dialogue, transitions, car movement and other sequences.
-
-              Testing and debugging are part of the development process rather than something being added only at the end.
-               We've already dealt with genuine integration/regression cases involving mobile input,
-                pause/resume and application backgrounding, wave transitions, ball lifecycle, rival collisions, 
-                level failure/retry, upgrades, Android-specific behaviour and the level-completion outro.
-                 You've also used Unity Console, stack traces and Android Logcat to investigate runtime problems.
-            </p>
-
-            <p>
-              Mention that the project is still in development. You can also briefly explain
-              what areas you have personally implemented and tested.
-            </p>
-          </div>
-
-          <div class="image-pair">
-            <img
-              src="assets/images/overview-01.png"
-              alt="Project gameplay overview screenshot"
-              data-lightbox
-            />
-
-            <img
-              src="assets/images/overview-02.png"
-              alt="Second project gameplay overview screenshot"
-              data-lightbox
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TECHNOLOGIES -->
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">TECHNOLOGIES</p>
-          <h2>Tools & technologies used</h2>
-        </div>
-
-        <div class="chip-grid">
-          <span>Unity 6</span>
-          <span>C#</span>
-          <span>Visual Studio</span>
-          <span>Blender</span>
-          <span>Jira / Trello</span>
-          <span>Android / iOS / Mobile</span>
-        </div>
-
-        <p class="section-note">
-          Keep only the technologies you genuinely used for the project.
-        </p>
-      </div>
-    </section>
-
-    <!-- GAMEPLAY & SYSTEMS -->
-    <section id="systems" class="section alt">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">GAMEPLAY & SYSTEMS</p>
-          <h2>What I built</h2>
-        </div>
-
-        <article class="feature-row">
-          <div class="media-card">
-            <video autoplay muted loop playsinline controls>
-              <source src="assets/videos/system-01.mp4" type="video/mp4" />
-            </video>
-          </div>
-
-          <div>
-            <h3>Core Gameplay System</h3>
-            <p>
-              Explain what is being demonstrated in this clip and how the player interacts with it.
-            </p>
-
-            <p>
-              Mention what you implemented and what kinds of testing you performed on this system.
-            </p>
-          </div>
-        </article>
-
-        <article class="feature-row reverse">
-          <div class="media-card">
-            <img
-              src="assets/images/system-02.png"
-              alt="Gameplay system screenshot"
-              data-lightbox
-            />
-          </div>
-
-          <div>
-            <h3>Gameplay System #2</h3>
-            <p>
-              Example: movement, enemy AI, inventory, interaction, combat, quests, UI,
-              save/load, or procedural generation.
-            </p>
-          </div>
-        </article>
-
-        <article class="feature-row">
-          <div class="media-card">
-            <video muted loop playsinline controls>
-              <source src="assets/videos/system-03.mp4" type="video/mp4" />
-            </video>
-          </div>
-
-          <div>
-            <h3>Gameplay System #3</h3>
-            <p>
-              Keep the explanation short and concrete. Describe what it does, what you worked on,
-              and any testing considerations that were important.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- TESTING APPROACH -->
-    <section id="testing" class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">TESTING APPROACH</p>
-          <h2>How I test the project</h2>
-        </div>
-
-        <p class="lead testing-intro">
-          Explain how testing is part of your development process rather than something done only
-          after a feature is finished.
-        </p>
-
-        <div class="qa-cards">
-          <article class="card">
-            <h3>Functional Testing</h3>
-            <p>
-              Verify that gameplay systems behave according to their intended requirements.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Exploratory Testing</h3>
-            <p>
-              Try unusual actions and player behaviour to expose unexpected states and defects.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Regression Testing</h3>
-            <p>
-              Retest related functionality after changes or fixes to catch unintended side effects.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Boundary & Edge Cases</h3>
-            <p>
-              Test limits, rapid inputs, unusual collisions, invalid states, and uncommon transitions.
-            </p>
-          </article>
-        </div>
-
-        <div class="testing-media">
-          <figure class="media-card">
-            <img
-              src="assets/images/testing-debug.png"
-              alt="Testing or debugging screenshot"
-              data-lightbox
-            />
-            <figcaption>
-              Optional: use a debugging or test setup screenshot here.
-            </figcaption>
-          </figure>
-
-          <div>
-            <h3>Testing during development</h3>
-            <p>
-              Describe how you test new features as you implement them. For example, you might
-              create normal-use tests first, then deliberately try invalid input, transitions,
-              boundary conditions, and repeated actions.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- REPRESENTATIVE TEST COVERAGE -->
-    <section id="coverage" class="section alt">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">REPRESENTATIVE TEST COVERAGE</p>
-          <h2>Example test cases</h2>
-        </div>
-
-        <p class="lead">
-          These are selected examples showing how important gameplay systems are tested.
-          They are not intended to represent every test performed during development.
-        </p>
-
-        <div class="test-group">
-          <div class="test-group-heading">
-            <h3>System #1 — Example: Player Movement</h3>
-            <p>
-              Replace this with one of your actual systems and update the cases below.
-            </p>
-          </div>
-
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Test</th>
-                  <th>Expected Result</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td>MOVE-01</td>
-                  <td>Perform normal movement input</td>
-                  <td>Player moves correctly in the intended direction</td>
-                  <td><span class="status pass">PASS</span></td>
-                </tr>
-
-                <tr>
-                  <td>MOVE-02</td>
-                  <td>Move against a collision boundary</td>
-                  <td>Player does not pass through blocking geometry</td>
-                  <td><span class="status pass">PASS</span></td>
-                </tr>
-
-                <tr>
-                  <td>MOVE-03</td>
-                  <td>Rapidly alternate movement inputs</td>
-                  <td>Movement state remains stable</td>
-                  <td><span class="status pass">PASS</span></td>
-                </tr>
-
-                <tr>
-                  <td>MOVE-04</td>
-                  <td>Trigger movement during another restricted action</td>
-                  <td>Invalid movement is blocked or handled correctly</td>
-                  <td><span class="status pass">PASS</span></td>
-                </tr>
-
-                <tr>
-                  <td>MOVE-05</td>
-                  <td>Move near map or navigation boundary</td>
-                  <td>No invalid position or stuck state occurs</td>
-                  <td><span class="status review">REVIEW</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="test-group">
-          <div class="test-group-heading">
-            <h3>System #2 — Example: Enemy AI</h3>
-            <p>
-              Use a second important system so employers can see that your test approach changes
-              depending on the feature.
-            </p>
-          </div>
-
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Test</th>
-                  <th>Expected Result</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td>AI-01</td>
-                  <td>Player enters detection range</td>
-                  <td>Enemy detects and responds to the player</td>
-                  <td><span class="status pass">PASS</span></td>
-                </tr>
-
-                <tr>
-                  <td>AI-02</td>
-                  <td>Player leaves detection range</td>
-                  <td>Enemy transitions to the correct fallback state</td>
-                  <td><span class="status pass">PASS</span></td>
-                </tr>
-
-                <tr>
-                  <td>AI-03</td>
-                  <td>Navigation route becomes unavailable</td>
-                  <td>Enemy fails safely without entering an invalid state</td>
-                  <td><span class="status review">REVIEW</span></td>
-                </tr>
-
-                <tr>
-                  <td>AI-04</td>
-                  <td>Multiple enemies detect the player simultaneously</td>
-                  <td>Each AI instance behaves independently and correctly</td>
-                  <td><span class="status pass">PASS</span></td>
-                </tr>
-
-                <tr>
-                  <td>AI-05</td>
-                  <td>Player dies during pursuit</td>
-                  <td>Enemy exits pursuit and enters the appropriate state</td>
-                  <td><span class="status pass">PASS</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="coverage-note">
-          <strong>Tip:</strong>
-          <span>
-            A failed or unresolved test is okay to show if it reflects a real known issue.
-            Realistic test coverage is stronger than pretending everything always passes.
-          </span>
-        </div>
-      </div>
-    </section>
-
-    <!-- OPTIONAL DEBUGGING EXAMPLE -->
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">TESTING & DEBUGGING EXAMPLES</p>
-          <h2>Selected technical investigations</h2>
-        </div>
-
-        <p class="lead">
-          This section is optional. Keep it only when you have a genuine example worth showing.
-        </p>
-
-        <article class="feature-row">
-          <div class="media-card">
-            <img
-              src="assets/images/debug-example.png"
-              alt="Debugging example from the project"
-              data-lightbox
-            />
-          </div>
-
-          <div>
-            <h3>Example investigation</h3>
-            <p>
-              Describe a real issue or unexpected behaviour you encountered.
-            </p>
-
-            <p>
-              Explain how you reproduced it, what evidence you used to narrow it down, and what the
-              result was. This does not need to be a formal bug report.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ARCHITECTURE -->
-    <section id="architecture" class="section alt">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">TECHNICAL ARCHITECTURE</p>
-          <h2>Selected UML diagrams</h2>
-        </div>
-
-        <p class="lead">
-          The project is still in development, so this section uses focused diagrams for important
-          systems instead of one huge full-project UML diagram.
-        </p>
-
-        <article class="architecture-block">
-          <div>
-            <h3>System Architecture #1</h3>
-            <p>
-              Explain what this diagram represents, the main responsibilities of the classes,
-              and why the relationships matter.
-            </p>
-          </div>
-
-          <figure class="media-card uml-card">
-            <img
-              src="assets/images/uml-system-01.png"
-              alt="UML diagram for gameplay system 1"
-              data-lightbox
-            />
-            <figcaption>Click to enlarge.</figcaption>
-          </figure>
-        </article>
-
-        <article class="architecture-block">
-          <div>
-            <h3>System Architecture #2</h3>
-            <p>
-              Add another focused diagram if it helps explain a different important system.
-            </p>
-          </div>
-
-          <figure class="media-card uml-card">
-            <img
-              src="assets/images/uml-system-02.png"
-              alt="UML diagram for gameplay system 2"
-              data-lightbox
-            />
-            <figcaption>Click to enlarge.</figcaption>
-          </figure>
-        </article>
-      </div>
-    </section>
-
-    <!-- STATUS -->
-    <section class="section project-status">
-      <div class="container narrow">
-        <p class="eyebrow">PROJECT STATUS</p>
-        <h2>Currently in development</h2>
-
-        <p class="lead">
-          Briefly explain the current state of the project, which systems are functional,
-          and what you are actively working on next.
-        </p>
-
-        <p>
-          This makes it clear that the portfolio reflects an evolving project rather than a
-          finished commercial release.
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> YOUR NAME</span>
-      <a href="#top">Back to top ↑</a>
-    </div>
-  </footer>
-
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox-close" aria-label="Close image viewer">×</button>
-    <img id="lightboxImage" alt="" />
-  </div>
-
-  <script src="js/main.js"></script>
+<header class="site-header"><div class="container nav-wrap">
+<a class="brand" href="#top">MY NIGHT RIDE</a>
+<nav class="nav"><a href="#about">About</a><a href="#systems">Systems</a><a href="#testing">Testing</a><a href="#coverage">Test Coverage</a><a href="#architecture">Architecture</a></nav>
+</div></header>
+
+<main id="top">
+<section class="section hero"><div class="container hero-grid">
+<div class="hero-copy">
+<p class="eyebrow">GAME PROJECT SHOWCASE</p>
+<h1>My Night Ride</h1>
+<p class="hero-summary">[TODO — final one-sentence description based on your intended premise.]</p>
+<div class="project-meta">
+<div><span>Engine</span><strong>Unity</strong></div>
+<div><span>Language</span><strong>C#</strong></div>
+<div><span>Platform</span><strong>Android / Mobile</strong></div>
+<div><span>Status</span><strong>In Development</strong></div>
+</div>
+<p class="project-period">Solo project • 2026 – Present</p>
+<a class="button primary" href="#systems">Explore the Project</a>
+</div>
+<div class="hero-gifs">
+<figure class="media-card"><img src="assets/images/hero-01.gif" alt="Gameplay preview from My Night Ride"><figcaption>Gameplay preview.</figcaption></figure>
+<figure class="media-card"><img src="assets/images/hero-02.gif" alt="Second gameplay preview from My Night Ride"><figcaption>Gameplay preview.</figcaption></figure>
+</div>
+</div></section>
+
+<section id="about" class="section alt"><div class="container">
+<div class="section-heading"><p class="eyebrow">ABOUT THE PROJECT</p><h2>What is My Night Ride?</h2></div>
+<div class="two-column">
+<div>
+<p class="lead">My Night Ride is a mobile game built independently in Unity and C#. Its core gameplay combines car movement with ball-based brick destruction across multi-wave levels.</p>
+<p>The player controls a car horizontally, launches balls through touch input, clears waves of destructible obstacles, manages limited lives and completes levels before the race timer expires.</p>
+<p>Levels are made up of multiple waves rather than isolated single-screen stages. Clearing a wave triggers a transition into the next section, while completing the full level leads into an outro and returns the player to an overworld progression system.</p>
+<p>Gameplay also includes rival cars, power-ups, score and combo systems, dialogue sequences, level ratings and rewards, persistent upgrades, and an overworld used for level selection and progression.</p>
+</div>
+<div class="image-pair">
+<img src="assets/images/overview-01.png" alt="My Night Ride gameplay overview" data-lightbox>
+<img src="assets/images/overview-02.png" alt="My Night Ride overworld or gameplay view" data-lightbox>
+</div>
+</div>
+</div></section>
+
+<section class="section"><div class="container">
+<div class="section-heading"><p class="eyebrow">TECHNOLOGIES</p><h2>Tools & technologies</h2></div>
+<div class="chip-grid"><span>Unity</span><span>C#</span><span>UniTask</span><span>Android</span><span>Unity Console</span><span>Android Logcat</span></div>
+<p class="section-note">[TODO — add any other tools, libraries, art/audio tools, or project-management tools you actually use.]</p>
+</div></section>
+
+<section id="systems" class="section alt"><div class="container">
+<div class="section-heading"><p class="eyebrow">GAMEPLAY & SYSTEMS</p><h2>Core systems</h2></div>
+
+<article class="feature-row">
+<div class="media-card"><video autoplay muted loop playsinline controls><source src="assets/videos/gameplay-waves.mp4" type="video/mp4"></video></div>
+<div><h3>Wave-Based Level Flow</h3><p>Each level is made up of multiple waves. Clearing the current wave triggers a transition into the next section, while completing the final wave moves the game into a level outro and then back into overworld progression.</p><p>The flow coordinates multiple systems including balls, rival cars, dialogue, race timing, gameplay state and level completion.</p></div>
+</article>
+
+<article class="feature-row reverse">
+<div class="media-card"><img src="assets/images/ball-gameplay.png" alt="Ball-based gameplay in My Night Ride" data-lightbox></div>
+<div><h3>Ball & Brick Gameplay</h3><p>The player launches balls through touch input and uses them to destroy obstacles across each wave. Ball lifecycle, starting ball count, gameplay state and transitions between waves are handled through dedicated gameplay systems.</p></div>
+</article>
+
+<article class="feature-row">
+<div class="media-card"><video muted loop playsinline controls><source src="assets/videos/rival-cars.mp4" type="video/mp4"></video></div>
+<div><h3>Rival Cars</h3><p>Rival cars add a chase/racing layer on top of the brick-destruction gameplay. Their behaviour interacts with level state, collisions, pausing, wave progression and failure conditions.</p></div>
+</article>
+
+<article class="feature-row reverse">
+<div class="media-card"><img src="assets/images/overworld.png" alt="My Night Ride overworld progression" data-lightbox></div>
+<div><h3>Overworld & Persistent Progression</h3><p>Outside individual levels, the game uses an overworld for level selection and unlocking. Persistent systems include currency, upgrades, unlock state and regenerating overworld lives.</p><p>The upgrade shop modifies gameplay values such as car speed and other player or ball attributes, with progression stored between sessions.</p></div>
+</article>
+
+<article class="feature-row">
+<div class="media-card"><img src="assets/images/dialogue.png" alt="Dialogue sequence in My Night Ride" data-lightbox></div>
+<div><h3>Dialogue & Sequenced Gameplay</h3><p>Dialogue, transitions, car movement and other multi-step gameplay sequences use asynchronous flows. UniTask is used for these sequences instead of relying on deeply nested coroutines.</p></div>
+</article>
+</div></section>
+
+<section id="testing" class="section"><div class="container">
+<div class="section-heading"><p class="eyebrow">TESTING APPROACH</p><h2>Testing during development</h2></div>
+<p class="lead">Testing and debugging are part of the development process rather than something added only at the end. New features are tested both in isolation and as part of the wider gameplay flow.</p>
+<div class="cards">
+<article class="card"><h3>Functional Testing</h3><p>Core behaviours such as input, ball lifecycle, wave completion, upgrades, level failure and progression are checked against their intended behaviour.</p></article>
+<article class="card"><h3>Integration Testing</h3><p>Systems are tested together because gameplay state, timing, rivals, balls, input, dialogue and transitions frequently affect one another.</p></article>
+<article class="card"><h3>Regression Testing</h3><p>Changes are retested against previously working flows, especially around pause/resume, retry behaviour, wave transitions, Android lifecycle events and level completion.</p></article>
+<article class="card"><h3>Runtime Debugging</h3><p>Unity Console, stack traces and Android Logcat are used to investigate runtime behaviour and Android-specific issues.</p></article>
+</div>
+<div class="testing-media">
+<figure class="media-card"><img src="assets/images/testing-debug.png" alt="Testing or debugging in Unity" data-lightbox><figcaption>Optional debugging or test setup screenshot.</figcaption></figure>
+<div><h3>Areas already tested</h3><p>Genuine integration and regression cases have already involved mobile input, pause/resume and application backgrounding, wave transitions, ball lifecycle, rival collisions, level failure and retry, upgrades, Android-specific behaviour and the level-completion outro.</p></div>
+</div>
+</div></section>
+
+<section id="coverage" class="section alt"><div class="container">
+<div class="section-heading"><p class="eyebrow">REPRESENTATIVE TEST COVERAGE</p><h2>Selected test areas</h2></div>
+<p class="lead">These tables are intentionally incomplete. Replace the TODO rows with real actions, expected results and actual statuses before publishing.</p>
+
+<div class="test-group"><h3>Mobile Input & Application State</h3><div class="table-wrap"><table>
+<thead><tr><th>ID</th><th>Test</th><th>Expected Result</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>INPUT-01</td><td>[TODO — normal horizontal touch movement]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
+<tr><td>INPUT-02</td><td>[TODO — rapid direction changes]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
+<tr><td>INPUT-03</td><td>[TODO — pause during touch input]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
+<tr><td>INPUT-04</td><td>[TODO — background and resume application during gameplay]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
+<tr><td>INPUT-05</td><td>[TODO — resume after application interruption]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
+</tbody></table></div></div>
+
+<div class="test-group"><h3>Wave & Level Flow</h3><div class="table-wrap"><table>
+<thead><tr><th>ID</th><th>Test</th><th>Expected Result</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>FLOW-01</td><td>[TODO — clear a normal wave]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
+<tr><td>FLOW-02</td><td>[TODO — transition from one wave to the next]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
+<tr><td>FLOW-03</td><td>[TODO — fail level during an active wave]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
+<tr><td>FLOW-04</td><td>[TODO — retry after level failure]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
+<tr><td>FLOW-05</td><td>[TODO — complete final wave and run outro]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
+<tr><td>FLOW-06</td><td>[TODO — return to overworld after completion]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
+</tbody></table></div></div>
+
+<div class="test-group"><h3>Progression & Upgrades</h3><div class="table-wrap"><table>
+<thead><tr><th>ID</th><th>Test</th><th>Expected Result</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>UPG-01</td><td>[TODO — purchase an upgrade]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
+<tr><td>UPG-02</td><td>[TODO — verify upgrade changes gameplay value]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
+<tr><td>UPG-03</td><td>[TODO — reload application and verify persistence]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
+<tr><td>UPG-04</td><td>[TODO — insufficient currency]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
+<tr><td>UPG-05</td><td>[TODO — verify upgraded car speed in gameplay]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
+</tbody></table></div></div>
+</div></section>
+
+<section id="architecture" class="section"><div class="container">
+<div class="section-heading"><p class="eyebrow">TECHNICAL ARCHITECTURE</p><h2>Modular gameplay systems</h2></div>
+<p class="lead">The game uses a modular, service-based architecture with separated systems for gameplay, progression, input, UI, saving and level state. Scene-specific services are initialized explicitly and accessed through a central <code>GameServices</code> layer.</p>
+
+<div class="cards">
+<article class="card"><h3>Input Separation</h3><p><code>GameplayInputRouter</code> handles mobile touch interpretation, while <code>PlayerController</code> applies car movement.</p></article>
+<article class="card"><h3>Progression Separation</h3><p><code>UpgradeService</code> reads persistent upgrade data and exposes gameplay values such as car speed, ball damage and starting ball count.</p></article>
+<article class="card"><h3>Gameplay State</h3><p><code>GameplayPauseService</code> owns pause state and broadcasts pause/resume events to other systems.</p></article>
+<article class="card"><h3>Level Flow Coordination</h3><p><code>LevelStateController</code> coordinates wave completion, dialogue, rival behaviour, race timing and level completion without implementing those systems directly.</p></article>
+</div>
+
+<article class="architecture-block">
+<div><h3>Services & Game State</h3><p>Dedicated services handle upgrades and progression, overworld lives, gameplay lives, ball management, rival cars, pause state, race timing, dialogue, save data and level state.</p><p>Global and scene-specific systems are exposed through <code>GameServices</code>. Gameplay services are created when the gameplay scene is initialized and cleaned up when it is destroyed.</p></div>
+<figure class="media-card uml-card"><img src="assets/images/uml-services.png" alt="My Night Ride service architecture diagram" data-lightbox><figcaption>Focused service architecture diagram.</figcaption></figure>
+</article>
+
+<article class="architecture-block reverse">
+<div><h3>Custom Update Flow</h3><p>Many systems implement observer interfaces such as <code>IUpdateObserver</code> and <code>IFixedUpdateObserver</code> and register with a shared <code>UpdateManager</code>, reducing reliance on individual Unity <code>Update()</code> methods.</p></div>
+<figure class="media-card uml-card"><img src="assets/images/uml-update-manager.png" alt="My Night Ride UpdateManager architecture diagram" data-lightbox><figcaption>Focused update-flow diagram.</figcaption></figure>
+</article>
+
+<article class="architecture-block">
+<div><h3>Events & Async Sequences</h3><p>Gameplay state changes such as pausing, level completion, life loss, dialogue progression and rival events are communicated through events where appropriate.</p><p>UniTask is used for dialogue playback, wave transitions, level outros and car movement sequences.</p></div>
+<figure class="media-card uml-card"><img src="assets/images/uml-level-flow.png" alt="My Night Ride level-flow architecture diagram" data-lightbox><figcaption>Focused level-flow diagram.</figcaption></figure>
+</article>
+
+<div class="code-example"><p class="eyebrow">EXAMPLE</p><h3>Gameplay values through progression services</h3><pre><code>GameServices.Upgrades.GetFloatValue(UpgradeType.CarSpeed)</code></pre><p>Gameplay systems can read progression values without needing to know how upgrade data is stored internally.</p></div>
+</div></section>
+
+<section class="section alt project-status"><div class="container narrow">
+<p class="eyebrow">PROJECT STATUS</p><h2>Currently in Development</h2>
+<p class="lead">My Night Ride has working interconnected gameplay, progression and persistence systems, but the project is still actively being expanded and refined.</p>
+<p>Current development includes continued work on gameplay behaviour, system integration, mobile/Android behaviour, progression, level flow and polish.</p>
+<p>[TODO — add your current major milestone, next planned feature, or immediate development focus.]</p>
+</div></section>
+</main>
+
+<footer><div class="container footer-inner"><span>© <span id="year"></span> [YOUR NAME]</span><a href="#top">Back to top ↑</a></div></footer>
+<div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" aria-label="Close image viewer">×</button><img id="lightboxImage" alt=""></div>
+<script src="js/main.js"></script>
 </body>
 </html>
