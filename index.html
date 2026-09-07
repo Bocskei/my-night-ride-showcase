@@ -38,10 +38,9 @@
 <div class="section-heading"><p class="eyebrow">ABOUT THE PROJECT</p><h2>What is My Night Ride?</h2></div>
 <div class="two-column">
 <div>
-<p class="lead">My Night Ride is a mobile game built independently in Unity and C#. Its core gameplay combines car movement with ball-based brick destruction across multi-wave levels.</p>
-<p>The player controls a car horizontally, launches balls through touch input, clears waves of destructible obstacles, manages limited lives and completes levels before the race timer expires.</p>
-<p>Levels are made up of multiple waves rather than isolated single-screen stages. Clearing a wave triggers a transition into the next section, while completing the full level leads into an outro and returns the player to an overworld progression system.</p>
-<p>Gameplay also includes rival cars, power-ups, score and combo systems, dialogue sequences, level ratings and rewards, persistent upgrades, and an overworld used for level selection and progression.</p>
+<p class="lead">My Night Ride is a mobile game built in Unity and C#, combining car movement with ball-and-brick gameplay across multi-wave levels.</p>
+<p>The player launches balls, clears obstacles, manages limited lives and races against the clock. Beyond the core gameplay, the project includes rival cars, power-ups, progression and upgrades, an overworld level system, dialogue, scoring and rewards.</p>
+<p>The project also integrates Unity Ads as part of its mobile functionality.</p>
 </div>
 <div class="image-pair">
 <img src="assets/images/overview-01.png" alt="My Night Ride gameplay overview" data-lightbox>
@@ -52,7 +51,7 @@
 
 <section class="section"><div class="container">
 <div class="section-heading"><p class="eyebrow">TECHNOLOGIES</p><h2>Tools & technologies</h2></div>
-<div class="chip-grid"><span>Unity</span><span>C#</span><span>UniTask</span><span>Android</span><span>Unity Console</span><span>Android Logcat</span></div>
+<div class="chip-grid"><span>Unity</span><span>C#</span><span>UniTask</span><span>Android</span><span>Unity Ads</span><span>Unity Console</span><span>Android Logcat</span></div>
 <p class="section-note">[TODO — add any other tools, libraries, art/audio tools, or project-management tools you actually use.]</p>
 </div></section>
 
@@ -94,10 +93,7 @@
 <article class="card"><h3>Regression Testing</h3><p>Changes are retested against previously working flows, especially around pause/resume, retry behaviour, wave transitions, Android lifecycle events and level completion.</p></article>
 <article class="card"><h3>Runtime Debugging</h3><p>Unity Console, stack traces and Android Logcat are used to investigate runtime behaviour and Android-specific issues.</p></article>
 </div>
-<div class="testing-media">
-<figure class="media-card"><img src="assets/images/testing-debug.png" alt="Testing or debugging in Unity" data-lightbox><figcaption>Optional debugging or test setup screenshot.</figcaption></figure>
-<div><h3>Areas already tested</h3><p>Genuine integration and regression cases have already involved mobile input, pause/resume and application backgrounding, wave transitions, ball lifecycle, rival collisions, level failure and retry, upgrades, Android-specific behaviour and the level-completion outro.</p></div>
-</div>
+
 </div></section>
 
 <section id="coverage" class="section alt"><div class="container">
@@ -137,8 +133,8 @@
 </div></section>
 
 <section id="architecture" class="section"><div class="container">
-<div class="section-heading"><p class="eyebrow">TECHNICAL ARCHITECTURE</p><h2>Modular gameplay systems</h2></div>
-<p class="lead">The game uses a modular, service-based architecture with separated systems for gameplay, progression, input, UI, saving and level state. Scene-specific services are initialized explicitly and accessed through a central <code>GameServices</code> layer.</p>
+<div class="section-heading"><p class="eyebrow">TECHNICAL ARCHITECTURE</p><h2>Project Architecture</h2></div>
+<p class="lead">My Night Ride separates gameplay, progression, input, saving and level state into dedicated systems. The diagrams below show selected parts of the project architecture and how the main systems communicate.</p>
 
 <div class="cards">
 <article class="card"><h3>Input Separation</h3><p><code>GameplayInputRouter</code> handles mobile touch interpretation, while <code>PlayerController</code> applies car movement.</p></article>
