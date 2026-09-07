@@ -7,14 +7,14 @@
     name="description"
     content="Game project portfolio showcasing gameplay systems, testing, technical architecture, and development work."
   />
-  <title>Project Name — Game Project Portfolio</title>
+  <title>My Night Ride - Game Project</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="#top">PROJECT NAME</a>
+      <a class="brand" href="#top">My Night Ride</a>
 
       <nav class="nav">
         <a href="#about">About</a>
@@ -33,26 +33,28 @@
         <div class="hero-copy">
           <p class="eyebrow">GAME PROJECT SHOWCASE</p>
 
-          <h1>PROJECT NAME</h1>
+          <h1>My Night Ride</h1>
 
           <p class="hero-summary">
-            A short one-sentence explanation of what the game is and what the player does.
+            From the mechanics, I could describe it as an arcade/action game 
+            with Breakout-style ball-and-brick gameplay and a racing/chase theme, 
+            but I want your preferred genre rather than assigning one.
           </p>
 
           <div class="project-meta">
             <div>
               <span>Engine</span>
-              <strong>Your Engine</strong>
+              <strong>Unity 6</strong>
             </div>
 
             <div>
               <span>Language</span>
-              <strong>Your Language</strong>
+              <strong>C#</strong>
             </div>
 
             <div>
               <span>Platform</span>
-              <strong>Windows</strong>
+              <strong>Android / iOS / Mobile</strong>
             </div>
 
             <div>
@@ -64,19 +66,19 @@
           <a class="button primary" href="#testing">Explore the Project</a>
         </div>
 
-        <div class="hero-gifs">
+        <div class="main-showcase-gifs">
           <figure class="media-card hero-media">
             <img
-              src="assets/images/hero-01.gif"
-              alt="Gameplay preview from Project Name"
+              src="assets/images/main-showcase-01.gif"
+              alt="Gameplay preview from My Night Ride"
             />
             <figcaption>Gameplay preview.</figcaption>
           </figure>
 
           <figure class="media-card hero-media">
             <img
-              src="assets/images/hero-02.gif"
-              alt="Second gameplay preview from Project Name"
+              src="assets/images/main-showcase-02.gif"
+              alt="Second gameplay preview from My Night Ride"
             />
             <figcaption>Gameplay preview.</figcaption>
           </figure>
@@ -95,8 +97,33 @@
         <div class="two-column">
           <div>
             <p class="lead">
-              Write one or two short paragraphs explaining the game, the genre, the main goal,
-              and the core gameplay loop.
+              My Night Ride is a mobile game built independently in Unity and C#. 
+              Its core gameplay combines car movement with ball-based brick destruction across multi-wave levels. 
+              The player controls a car horizontally, launches balls through touch input, 
+              clears waves of destructible obstacles, manages limited lives and completes levels before the race timer expires.
+
+              Levels consist of multiple waves rather than isolated single-screen stages. 
+              Clearing a wave triggers a transition into the next section, 
+              while completing the full level leads into an outro and returns the player to an overworld progression system. 
+              Gameplay also includes rival cars, power-ups, score and combo systems, dialogue sequences, 
+              level ratings/rewards, and persistent upgrades.
+
+              Outside individual levels, the game has an overworld where levels are selected and unlocked through progression. 
+              Persistent systems include currency, upgrades, unlock state and regenerating overworld lives. 
+              The upgrade shop modifies gameplay values such as car speed and other player/ball attributes, 
+              with progression stored between sessions.
+
+              The project has been developed as interconnected but separated C# systems rather than 
+              putting the game's behaviour into a small number of large MonoBehaviours. 
+              Examples include services for progression, upgrades, lives, balls, rivals, dialogue, 
+              pausing, race timing and other gameplay state, with event-driven communication used where appropriate.
+              The project also uses asynchronous flows for dialogue, transitions, car movement and other sequences.
+
+              Testing and debugging are part of the development process rather than something being added only at the end.
+               We've already dealt with genuine integration/regression cases involving mobile input,
+                pause/resume and application backgrounding, wave transitions, ball lifecycle, rival collisions, 
+                level failure/retry, upgrades, Android-specific behaviour and the level-completion outro.
+                 You've also used Unity Console, stack traces and Android Logcat to investigate runtime problems.
             </p>
 
             <p>
@@ -131,12 +158,12 @@
         </div>
 
         <div class="chip-grid">
-          <span>Your Engine</span>
-          <span>C++ / C#</span>
+          <span>Unity 6</span>
+          <span>C#</span>
           <span>Visual Studio</span>
           <span>Blender</span>
           <span>Jira / Trello</span>
-          <span>Windows</span>
+          <span>Android / iOS / Mobile</span>
         </div>
 
         <p class="section-note">

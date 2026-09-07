@@ -111,18 +111,18 @@ a {
   align-items: center;
 }
 
-.hero-gifs {
+.main-showcase-gifs {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
   align-items: stretch;
 }
 
-.hero-gifs .media-card {
+.main-showcase-gifs .media-card {
   height: 100%;
 }
 
-.hero-gifs .media-card img {
+.main-showcase-gifs .media-card img {
   height: 100%;
   min-height: 360px;
   aspect-ratio: 3 / 4;
