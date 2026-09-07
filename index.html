@@ -28,7 +28,7 @@
 <p class="project-period">Solo project • 2026 – Present</p>
 <a class="button primary" href="#systems">Explore the Project</a>
 </div>
-<div class="hero-gifs">
+<div class="hero-gifs portrait-media">
 <figure class="media-card"><img src="assets/images/hero-01.gif" alt="Gameplay preview from My Night Ride"><figcaption>Gameplay preview.</figcaption></figure>
 <figure class="media-card"><img src="assets/images/hero-02.gif" alt="Second gameplay preview from My Night Ride"><figcaption>Gameplay preview.</figcaption></figure>
 </div>
@@ -43,43 +43,61 @@
 <p>The project also integrates Unity Ads as part of its mobile functionality.</p>
 </div>
 <div class="image-pair">
-<img src="assets/images/game1.png" alt="My Night Ride gameplay overview" data-lightbox>
-<img src="assets/images/game2.png" alt="My Night Ride overworld or gameplay view" data-lightbox>
+<img src="assets/images/overview-01.png" alt="My Night Ride gameplay overview" data-lightbox>
+<img src="assets/images/overview-02.png" alt="My Night Ride overworld or gameplay view" data-lightbox>
 </div>
 </div>
 </div></section>
 
 <section class="section"><div class="container">
-<div class="section-heading"><p class="eyebrow">TECHNOLOGIES</p><h2>Tools & technologies</h2></div>
-<div class="chip-grid"><span>Unity</span><span>C#</span><span>UniTask</span><span>Android</span><span>Unity Ads</span><span>Unity Console</span><span>Android Logcat</span></div>
-<p class="section-note">[TODO — add any other tools, libraries, art/audio tools, or project-management tools you actually use.]</p>
+<div class="section-heading"><p class="eyebrow">TECHNOLOGIES USED</p><h2>Tools & technologies</h2></div>
+<div class="chip-grid">
+<span>Unity</span>
+<span>C#</span>
+<span>UniTask</span>
+<span>Unity Input System</span>
+<span>Unity UI</span>
+<span>Rigidbody2D / 2D Physics</span>
+<span>ScriptableObjects</span>
+<span>Git</span>
+<span>Android Build Pipeline</span>
+<span>Unity Ads</span>
+<span>Unity Console / Stack Traces</span>
+<span>Android Logcat</span>
+<span>Custom UpdateManager</span>
+<span>IUpdateObserver / IFixedUpdateObserver</span>
+<span>Event-driven architecture</span>
+<span>Service-based architecture</span>
+<span>Persistent save / progression system</span>
+</div>
+<p class="section-note">UniTask is used for asynchronous gameplay sequences, while ScriptableObjects provide configurable upgrade and gameplay data.</p>
 </div></section>
 
 <section id="systems" class="section alt"><div class="container">
 <div class="section-heading"><p class="eyebrow">GAMEPLAY & SYSTEMS</p><h2>Core systems</h2></div>
 
 <article class="feature-row">
-<div class="media-card"><video autoplay muted loop playsinline controls><source src="assets/videos/gameplay-waves.mp4" type="video/mp4"></video></div>
+<div class="media-card gameplay-media"><video autoplay muted loop playsinline controls><source src="assets/videos/gameplay-waves.mp4" type="video/mp4"></video></div>
 <div><h3>Wave-Based Level Flow</h3><p>Each level is made up of multiple waves. Clearing the current wave triggers a transition into the next section, while completing the final wave moves the game into a level outro and then back into overworld progression.</p><p>The flow coordinates multiple systems including balls, rival cars, dialogue, race timing, gameplay state and level completion.</p></div>
 </article>
 
 <article class="feature-row reverse">
-<div class="media-card"><img src="assets/images/game2.png" alt="Ball-based gameplay in My Night Ride" data-lightbox></div>
+<div class="media-card gameplay-media"><img src="assets/images/ball-gameplay.png" alt="Ball-based gameplay in My Night Ride" data-lightbox></div>
 <div><h3>Ball & Brick Gameplay</h3><p>The player launches balls through touch input and uses them to destroy obstacles across each wave. Ball lifecycle, starting ball count, gameplay state and transitions between waves are handled through dedicated gameplay systems.</p></div>
 </article>
 
 <article class="feature-row">
-<div class="media-card"><video muted loop playsinline controls><source src="assets/videos/rival-cars.mp4" type="video/mp4"></video></div>
+<div class="media-card gameplay-media"><video muted loop playsinline controls><source src="assets/videos/rival-cars.mp4" type="video/mp4"></video></div>
 <div><h3>Rival Cars</h3><p>Rival cars add a chase/racing layer on top of the brick-destruction gameplay. Their behaviour interacts with level state, collisions, pausing, wave progression and failure conditions.</p></div>
 </article>
 
 <article class="feature-row reverse">
-<div class="media-card"><img src="assets/images/gameover.png" alt="My Night Ride overworld progression" data-lightbox></div>
+<div class="media-card gameplay-media"><img src="assets/images/overworld.png" alt="My Night Ride overworld progression" data-lightbox></div>
 <div><h3>Overworld & Persistent Progression</h3><p>Outside individual levels, the game uses an overworld for level selection and unlocking. Persistent systems include currency, upgrades, unlock state and regenerating overworld lives.</p><p>The upgrade shop modifies gameplay values such as car speed and other player or ball attributes, with progression stored between sessions.</p></div>
 </article>
 
 <article class="feature-row">
-<div class="media-card"><img src="assets/images/dialogue.png" alt="Dialogue sequence in My Night Ride" data-lightbox></div>
+<div class="media-card gameplay-media"><img src="assets/images/dialogue.png" alt="Dialogue sequence in My Night Ride" data-lightbox></div>
 <div><h3>Dialogue & Sequenced Gameplay</h3><p>Dialogue, transitions, car movement and other multi-step gameplay sequences use asynchronous flows. UniTask is used for these sequences instead of relying on deeply nested coroutines.</p></div>
 </article>
 </div></section>
