@@ -1,69 +1,43 @@
-# My Night Ride Portfolio
+# My Night Ride: Portfolio
 
-Replace your existing `index.html`, `css/style.css`, and `js/main.js`.
+This package contains the current portfolio page, bilingual language switching, portrait gameplay-media styling, and four focused UML diagrams.
 
-## Already filled in
-- My Night Ride
-- Unity / C#
-- Android / Mobile
-- Solo project
-- 2026 – Present
-- In development
-- Wave-based ball-and-brick gameplay
-- Rival cars
-- Overworld progression
-- Upgrades / persistence
-- Dialogue / async flows
-- GameServices
-- UpdateManager
-- IUpdateObserver / IFixedUpdateObserver
-- GameplayInputRouter / PlayerController separation
-- UpgradeService
-- GameplayPauseService
-- LevelStateController
-- UniTask
-- Unity Console / stack traces / Android Logcat
-- Real integration/regression areas already encountered
+## Replace / copy
+- `index.html`
+- `css/style.css`
+- `js/main.js`
+- `assets/images/uml-scene-lifecycle.png`
+- `assets/images/uml-persistence.png`
+- `assets/images/uml-upgrades.png`
+- `assets/images/uml-async-level-flow.png`
 
-## Remaining TODOs
-Search `index.html` for `[TODO`.
+## Gameplay media expected by index.html
+All gameplay media is now GIF-based. Put these in `assets/images/`:
 
-Most important:
-1. Final genre wording
-2. Final one-sentence description
-3. Your name
-4. Additional tools/libraries if desired
-5. Real Representative Test Coverage results
-6. Current milestone / next development focus
-7. Actual media filenames if different
+- `edited_gameplay.gif`
+- `transition.gif`
+- `uninterrupted_gameplay.gif`
+- `ball-gameplay.gif`
+- `opponent-vehicles.gif`
+- `overworld.gif`
+- `dialogue.gif`
 
-## Expected media
-Images:
-- hero-01.gif
-- hero-02.gif
-- overview-01.png
-- overview-02.png
-- ball-gameplay.png
-- overworld.png
-- dialogue.png
-- testing-debug.png
-- uml-services.png
-- uml-update-manager.png
-- uml-level-flow.png
+Architecture diagrams intentionally remain PNG files. The opponent-vehicle media reference is named `opponent-vehicles.gif` to match the reader-facing terminology.
 
-Videos:
-- gameplay-waves.mp4
-- rival-cars.mp4
+## UML diagrams
+- Scene Lifecycle: `GameplaySceneInitializer`, selected runtime services, `GameServices`
+- Structured Persistence: `SaveService`, `SaveData`, `MapBestScoreData`, `JsonUtility`, `PlayerPrefs`
+- Data-Driven Upgrades: `UpgradeDatabase`, `UpgradeDefinition`, `UpgradeService`, `UpgradeLevelData`
+- Async Level Flow: final-wave completion and concurrent dialogue / `DriveAway()` flow
 
-## UML
-You do not need one full-project UML. Recommended focused diagrams:
-- Services / GameServices
-- UpdateManager / observer interfaces
-- LevelStateController / level flow
+SVG source versions are in `uml-source/`.
 
-## Commit
+## Notes
+The diagrams only show members and relationships supported by the project information supplied for this portfolio. Where a source definition was not available, details were intentionally left out rather than invented.
+
+## Publish
 ```bash
 git add .
-git commit -m "Add My Night Ride project content"
+git commit -m "Update My Night Ride portfolio"
 git push
 ```

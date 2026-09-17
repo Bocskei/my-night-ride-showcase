@@ -1,194 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="My Night Ride — a Unity mobile game project showcasing gameplay systems, testing, architecture, and development work.">
-<title>My Night Ride — Game Project Portfolio</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="My Night Ride : a mobile action game built around touch-controlled driving, ball-based obstacle clearing, timed levels, and persistent progression.">
+  <title>My Night Ride: Game Project Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="site-header"><div class="container nav-wrap">
-<a class="brand" href="#top">MY NIGHT RIDE</a>
-<nav class="nav"><a href="#about">About</a><a href="#systems">Systems</a><a href="#testing">Testing</a><a href="#coverage">Test Coverage</a><a href="#architecture">Architecture</a></nav>
-</div></header>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="#top">MY NIGHT RIDE</a>
+    <div class="header-actions">
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#systems" data-i18n="nav.systems">Systems</a>
+        <a href="#testing" data-i18n="nav.testing">Testing</a>
+        <a href="#coverage" data-i18n="nav.coverage">Test Coverage</a>
+        <a href="#architecture" data-i18n="nav.architecture">Architecture</a>
+      </nav>
+      <div class="language-switch" aria-label="Language selector">
+        <button class="language-button active" type="button" data-language="en" aria-pressed="true" title="English">
+          <svg class="flag-icon" viewBox="0 0 60 36" aria-hidden="true"><rect width="60" height="36" fill="#012169"/><path d="M0 0l60 36M60 0L0 36" stroke="#fff" stroke-width="8"/><path d="M0 0l60 36M60 0L0 36" stroke="#C8102E" stroke-width="4"/><path d="M30 0v36M0 18h60" stroke="#fff" stroke-width="12"/><path d="M30 0v36M0 18h60" stroke="#C8102E" stroke-width="7"/></svg>
+          <span>EN</span>
+        </button>
+        <button class="language-button" type="button" data-language="hu" aria-pressed="false" title="Magyar">
+          <svg class="flag-icon" viewBox="0 0 60 36" aria-hidden="true"><rect width="60" height="12" y="0" fill="#CE2939"/><rect width="60" height="12" y="12" fill="#fff"/><rect width="60" height="12" y="24" fill="#477050"/></svg>
+          <span>HU</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
 
 <main id="top">
-<section class="section hero"><div class="container hero-grid">
-<div class="hero-copy">
-<p class="eyebrow">GAME PROJECT SHOWCASE</p>
-<h1>My Night Ride</h1>
-<p class="hero-summary">[TODO — final one-sentence description based on your intended premise.]</p>
-<div class="project-meta">
-<div><span>Engine</span><strong>Unity</strong></div>
-<div><span>Language</span><strong>C#</strong></div>
-<div><span>Platform</span><strong>Android / Mobile</strong></div>
-<div><span>Status</span><strong>In Development</strong></div>
-</div>
-<p class="project-period">Solo project • 2026 – Present</p>
-<a class="button primary" href="#systems">Explore the Project</a>
-</div>
-<div class="hero-gifs portrait-media">
-<figure class="media-card"><img src="assets/images/hero-01.gif" alt="Gameplay preview from My Night Ride"><figcaption>Gameplay preview.</figcaption></figure>
-<figure class="media-card"><img src="assets/images/hero-02.gif" alt="Second gameplay preview from My Night Ride"><figcaption>Gameplay preview.</figcaption></figure>
-</div>
-</div></section>
+<section class="section project-intro">
+  <div class="container intro-grid">
+    <div class="intro-copy">
+      <p class="eyebrow" data-i18n="intro.eyebrow">GAME PROJECT SHOWCASE</p>
+      <h1>My Night Ride</h1>
+      <p class="intro-summary" data-i18n="intro.summary">A mobile action game built around touch-controlled driving, ball-based obstacle clearing, timed levels, and persistent progression.</p>
+      <div class="project-meta">
+        <div><span data-i18n="meta.engine">Engine</span><strong>Unity</strong></div>
+        <div><span data-i18n="meta.language">Language</span><strong>C#</strong></div>
+        <div><span data-i18n="meta.platform">Platform</span><strong>Android / Mobile</strong></div>
+        <div><span data-i18n="meta.status">Status</span><strong data-i18n="meta.development">In Development</strong></div>
+      </div>
+      <p class="project-period" data-i18n="intro.period">Solo project • 2026 - Present</p>
+      <a class="button primary" href="#systems" data-i18n="intro.button">Explore the Project</a>
+    </div>
+    <div class="preview-media portrait-media">
+      <figure class="media-card">
+        <img src="assets/images/edited_gameplay.gif" alt="Core gameplay preview from My Night Ride" data-i18n-alt="media.preview1Alt">
+        <figcaption data-i18n="media.preview1Caption">Core gameplay.</figcaption>
+      </figure>
+      <figure class="media-card">
+        <img src="assets/images/transition.gif" alt="Multi-wave and opponent vehicle gameplay preview from My Night Ride" data-i18n-alt="media.preview2Alt">
+        <figcaption data-i18n="media.preview2Caption">Level and opponent vehicle gameplay.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
 <section id="about" class="section alt"><div class="container">
-<div class="section-heading"><p class="eyebrow">ABOUT THE PROJECT</p><h2>What is My Night Ride?</h2></div>
-<div class="two-column">
-<div>
-<p class="lead">My Night Ride is a mobile game built in Unity and C#, combining car movement with ball-and-brick gameplay across multi-wave levels.</p>
-<p>The player launches balls, clears obstacles, manages limited lives and races against the clock. Beyond the core gameplay, the project includes rival cars, power-ups, progression and upgrades, an overworld level system, dialogue, scoring and rewards.</p>
-<p>The project also integrates Unity Ads as part of its mobile functionality.</p>
-</div>
-<div class="image-pair">
-<img src="assets/images/overview-01.png" alt="My Night Ride gameplay overview" data-lightbox>
-<img src="assets/images/overview-02.png" alt="My Night Ride overworld or gameplay view" data-lightbox>
-</div>
-</div>
+  <div class="section-heading"><p class="eyebrow" data-i18n="about.eyebrow">ABOUT THE PROJECT</p><h2 data-i18n="about.title">What is My Night Ride?</h2></div>
+  <div class="two-column">
+    <div>
+      <p class="lead" data-i18n="about.lead">Each level is a timed sequence of waves where the player steers horizontally, launches balls to clear obstacles, and manages a limited number of lives. Power-ups, scoring, opponent vehicles and changing wave layouts add variation throughout a level.</p>
+      <p data-i18n="about.body">Between levels, the player returns to an overworld used for level selection and progression. Currency, upgrades, unlocks, best scores and other progression data persist between sessions.</p>
+      <p data-i18n="about.body2"></p>
+      <p data-i18n="about.footer"></p>
+    </div>
+    <div class="image-pair portrait-pair">
+      <figure class="media-card"><img src="assets/images/uninterrupted_gameplay.gif" alt="My Night Ride core gameplay" data-i18n-alt="media.game1Alt" data-lightbox><figcaption data-i18n="media.game1Caption">In-level gameplay.</figcaption></figure>
+      <figure class="media-card"><img src="assets/images/overworld.gif" alt="My Night Ride overworld progression" data-i18n-alt="media.game2Alt" data-lightbox><figcaption data-i18n="media.game2Caption">Overworld progression.</figcaption></figure>
+    </div>
+  </div>
 </div></section>
 
 <section class="section"><div class="container">
-<div class="section-heading"><p class="eyebrow">TECHNOLOGIES USED</p><h2>Tools & technologies</h2></div>
-<div class="chip-grid">
-<span>Unity</span>
-<span>C#</span>
-<span>UniTask</span>
-<span>Unity Input System</span>
-<span>Unity UI</span>
-<span>Rigidbody2D / 2D Physics</span>
-<span>ScriptableObjects</span>
-<span>Git</span>
-<span>Android Build Pipeline</span>
-<span>Unity Ads</span>
-<span>Unity Console / Stack Traces</span>
-<span>Android Logcat</span>
-<span>Custom UpdateManager</span>
-<span>IUpdateObserver / IFixedUpdateObserver</span>
-<span>Event-driven architecture</span>
-<span>Service-based architecture</span>
-<span>Persistent save / progression system</span>
-</div>
-<p class="section-note">UniTask is used for asynchronous gameplay sequences, while ScriptableObjects provide configurable upgrade and gameplay data.</p>
+  <div class="section-heading"><p class="eyebrow" data-i18n="tech.eyebrow">TECHNOLOGIES USED</p><h2 data-i18n="tech.title">Tools & technologies</h2></div>
+  <div class="chip-grid">
+    <span>Unity</span><span>C#</span><span>UniTask</span><span>Unity Input System</span><span>Unity UI</span>
+    <span data-i18n="tech.physics">Rigidbody2D / 2D Physics</span><span>ScriptableObjects</span><span>Git</span>
+    <span data-i18n="tech.androidBuild">Android Build Pipeline</span><span>Unity Ads</span>
+    <span data-i18n="tech.stack">Unity Console / Stack Traces</span><span>Android Logcat</span><span>Custom UpdateManager</span>
+    <span data-i18n="tech.events">Event-Driven Architecture</span><span data-i18n="tech.services">Service-Based Architecture</span>
+    <span data-i18n="tech.persistence">Persistent Save / Progression (JsonUtility + PlayerPrefs)</span>
+  </div>
+  <p class="section-note" data-i18n="tech.note">UniTask handles asynchronous gameplay flows, ScriptableObjects define configurable gameplay data, and persistent progression is serialized to JSON with Unity JsonUtility and stored through PlayerPrefs.</p>
 </div></section>
 
 <section id="systems" class="section alt"><div class="container">
-<div class="section-heading"><p class="eyebrow">GAMEPLAY & SYSTEMS</p><h2>Core systems</h2></div>
-
-<article class="feature-row">
-<div class="media-card gameplay-media"><video autoplay muted loop playsinline controls><source src="assets/videos/gameplay-waves.mp4" type="video/mp4"></video></div>
-<div><h3>Wave-Based Level Flow</h3><p>Each level is made up of multiple waves. Clearing the current wave triggers a transition into the next section, while completing the final wave moves the game into a level outro and then back into overworld progression.</p><p>The flow coordinates multiple systems including balls, rival cars, dialogue, race timing, gameplay state and level completion.</p></div>
-</article>
-
-<article class="feature-row reverse">
-<div class="media-card gameplay-media"><img src="assets/images/ball-gameplay.png" alt="Ball-based gameplay in My Night Ride" data-lightbox></div>
-<div><h3>Ball & Brick Gameplay</h3><p>The player launches balls through touch input and uses them to destroy obstacles across each wave. Ball lifecycle, starting ball count, gameplay state and transitions between waves are handled through dedicated gameplay systems.</p></div>
-</article>
-
-<article class="feature-row">
-<div class="media-card gameplay-media"><video muted loop playsinline controls><source src="assets/videos/rival-cars.mp4" type="video/mp4"></video></div>
-<div><h3>Rival Cars</h3><p>Rival cars add a chase/racing layer on top of the brick-destruction gameplay. Their behaviour interacts with level state, collisions, pausing, wave progression and failure conditions.</p></div>
-</article>
-
-<article class="feature-row reverse">
-<div class="media-card gameplay-media"><img src="assets/images/overworld.png" alt="My Night Ride overworld progression" data-lightbox></div>
-<div><h3>Overworld & Persistent Progression</h3><p>Outside individual levels, the game uses an overworld for level selection and unlocking. Persistent systems include currency, upgrades, unlock state and regenerating overworld lives.</p><p>The upgrade shop modifies gameplay values such as car speed and other player or ball attributes, with progression stored between sessions.</p></div>
-</article>
-
-<article class="feature-row">
-<div class="media-card gameplay-media"><img src="assets/images/dialogue.png" alt="Dialogue sequence in My Night Ride" data-lightbox></div>
-<div><h3>Dialogue & Sequenced Gameplay</h3><p>Dialogue, transitions, car movement and other multi-step gameplay sequences use asynchronous flows. UniTask is used for these sequences instead of relying on deeply nested coroutines.</p></div>
-</article>
+  <div class="section-heading"><p class="eyebrow" data-i18n="systems.eyebrow">GAMEPLAY & SYSTEMS</p><h2 data-i18n="systems.title">Core systems</h2></div>
+  <article class="feature-row">
+    <figure class="media-card gameplay-media"><img src="assets/images/transition.gif" alt="Wave transition gameplay in My Night Ride" data-i18n-alt="media.waveAlt" data-lightbox><figcaption data-i18n="media.waveCaption">Wave transition.</figcaption></figure>
+    <div><h3 data-i18n="systems.waveTitle">Wave-Based Level Flow</h3><p data-i18n="systems.waveBody">Levels are built from multiple waves. Clearing the current wave starts a transition into the next section; clearing the final wave moves into the level-ending flow and then back to overworld progression.</p></div>
+  </article>
+  <article class="feature-row reverse">
+    <figure class="media-card gameplay-media"><img src="assets/images/ball-brick.gif" alt="Ball-based gameplay in My Night Ride" data-i18n-alt="media.ballAlt" data-lightbox><figcaption data-i18n="media.ballCaption">Ball and brick gameplay.</figcaption></figure>
+    <div><h3 data-i18n="systems.ballTitle">Ball & Brick Gameplay</h3><p data-i18n="systems.ballBody">Touch input controls the car and launches balls used to clear destructible obstacles. Ball lifecycle, shooting, wave state and related gameplay behaviour are handled by dedicated systems.</p></div>
+  </article>
+  <article class="feature-row">
+    <figure class="media-card gameplay-media"><img src="assets/images/rival_takeover.gif" alt="Opponent vehicle gameplay in My Night Ride" data-i18n-alt="media.rivalAlt" data-lightbox><figcaption data-i18n="media.rivalCaption">Opponent vehicle gameplay.</figcaption></figure>
+    <div><h3 data-i18n="systems.rivalTitle">Opponent Vehicles</h3><p data-i18n="systems.rivalBody">Opponent vehicles introduce an additional hazard during levels. They can interact directly with the player through collisions and are integrated with wave progression and level state.</p></div>
+  </article>
+  <article class="feature-row reverse">
+    <figure class="media-card gameplay-media"><img src="assets/images/overworld.gif" alt="My Night Ride overworld progression" data-i18n-alt="media.overworldAlt" data-lightbox><figcaption data-i18n="media.overworldCaption">Overworld progression.</figcaption></figure>
+    <div><h3 data-i18n="systems.overworldTitle">Overworld & Progression</h3><p data-i18n="systems.overworldBody1">The overworld handles level selection and unlock progression. Persistent data includes currency, upgrades, unlock state, regenerating overworld lives, settings, statistics and map best scores.</p><p data-i18n="systems.overworldBody2">Upgrade definitions are configured separately from the player's saved upgrade levels, allowing gameplay systems to request the resulting values without depending on shop or save-data details.</p></div>
+  </article>
+  <article class="feature-row">
+    <figure class="media-card gameplay-media dialogue-media"><img src="assets/images/dialogue.gif" alt="Dialogue sequence in My Night Ride" data-i18n-alt="media.dialogueAlt" data-lightbox><figcaption data-i18n="media.dialogueCaption">Dialogue sequence.</figcaption></figure>
+    <div><h3 data-i18n="systems.dialogueTitle">Dialogue & Async Sequences</h3><p data-i18n="systems.dialogueBody">UniTask is used for multi-step gameplay flows such as dialogue, wave transitions, car movement and the level outro. The final level flow can run dialogue and the player's drive-away sequence in parallel and continue only after both have finished.</p></div>
+  </article>
 </div></section>
 
 <section id="testing" class="section"><div class="container">
-<div class="section-heading"><p class="eyebrow">TESTING APPROACH</p><h2>Testing during development</h2></div>
-<p class="lead">Testing and debugging are part of the development process rather than something added only at the end. New features are tested both in isolation and as part of the wider gameplay flow.</p>
-<div class="cards">
-<article class="card"><h3>Functional Testing</h3><p>Core behaviours such as input, ball lifecycle, wave completion, upgrades, level failure and progression are checked against their intended behaviour.</p></article>
-<article class="card"><h3>Integration Testing</h3><p>Systems are tested together because gameplay state, timing, rivals, balls, input, dialogue and transitions frequently affect one another.</p></article>
-<article class="card"><h3>Regression Testing</h3><p>Changes are retested against previously working flows, especially around pause/resume, retry behaviour, wave transitions, Android lifecycle events and level completion.</p></article>
-<article class="card"><h3>Runtime Debugging</h3><p>Unity Console, stack traces and Android Logcat are used to investigate runtime behaviour and Android-specific issues.</p></article>
-</div>
-
+  <div class="section-heading"><p class="eyebrow" data-i18n="testing.eyebrow">TESTING APPROACH</p><h2 data-i18n="testing.title">Testing during development</h2></div>
+  <p class="lead" data-i18n="testing.lead">Testing and debugging are part of normal development. New features are checked in isolation and again in the wider gameplay flow, with extra attention to mobile input, scene transitions, persistence and Android-specific behaviour.</p>
+  <div class="cards">
+    <article class="card"><h3 data-i18n="testing.functionalTitle">Functional Testing</h3><p data-i18n="testing.functionalBody">Core behaviours such as input, ball lifecycle, wave completion, upgrades, failure states and progression are checked against their intended behaviour.</p></article>
+    <article class="card"><h3 data-i18n="testing.integrationTitle">Integration Testing</h3><p data-i18n="testing.integrationBody">Interacting systems are tested together, particularly where input, pausing, opponent vehicles, balls, dialogue, timers and scene state affect one another.</p></article>
+    <article class="card"><h3 data-i18n="testing.regressionTitle">Regression Testing</h3><p data-i18n="testing.regressionBody">Changes are retested against previously working flows, including pause/resume, retry behaviour, wave transitions, progression and Android lifecycle events.</p></article>
+    <article class="card"><h3 data-i18n="testing.runtimeTitle">Runtime Debugging</h3><p data-i18n="testing.runtimeBody">Unity Console, stack traces and Android Logcat are used to trace runtime failures and platform-specific problems.</p></article>
+  </div>
 </div></section>
 
 <section id="coverage" class="section alt"><div class="container">
-<div class="section-heading"><p class="eyebrow">REPRESENTATIVE TEST COVERAGE</p><h2>Selected test areas</h2></div>
-<p class="lead">These tables are intentionally incomplete. Replace the TODO rows with real actions, expected results and actual statuses before publishing.</p>
+  <div class="section-heading"><p class="eyebrow" data-i18n="coverage.eyebrow">REPRESENTATIVE TEST COVERAGE</p><h2 data-i18n="coverage.title">Selected test cases</h2></div>
+  <p class="lead" data-i18n="coverage.lead">A small selection of real cases from development, including normal behaviour, integration cases and items that still require retesting.</p>
 
-<div class="test-group"><h3>Mobile Input & Application State</h3><div class="table-wrap"><table>
-<thead><tr><th>ID</th><th>Test</th><th>Expected Result</th><th>Status</th></tr></thead>
-<tbody>
-<tr><td>INPUT-01</td><td>[TODO — normal horizontal touch movement]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
-<tr><td>INPUT-02</td><td>[TODO — rapid direction changes]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
-<tr><td>INPUT-03</td><td>[TODO — pause during touch input]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
-<tr><td>INPUT-04</td><td>[TODO — background and resume application during gameplay]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
-<tr><td>INPUT-05</td><td>[TODO — resume after application interruption]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
-</tbody></table></div></div>
+  <div class="test-group"><h3 data-i18n="coverage.inputTitle">Mobile Input & Application State</h3><div class="table-wrap"><table>
+    <thead><tr><th>ID</th><th data-i18n="table.test">Test</th><th data-i18n="table.expected">Expected Result</th><th data-i18n="table.status">Status</th></tr></thead>
+    <tbody>
+      <tr><td>MOB-01</td><td data-i18n="test.input1">Touch and hold the left movement zone without dragging</td><td data-i18n="expected.input1">Car moves left continuously while the touch is held</td><td><span class="status passed" data-i18n="status.passed">Passed</span></td></tr>
+      <tr><td>MOB-02</td><td data-i18n="test.input4">Release the active movement touch</td><td data-i18n="expected.input4">Ball is fired when the movement touch is released</td><td><span class="status passed" data-i18n="status.passed">Passed</span></td></tr>
+      <tr><td>MOB-03</td><td data-i18n="test.input5">Touch UI while gameplay input is active</td><td data-i18n="expected.input5">UI touch is ignored by gameplay movement input</td><td><span class="status passed" data-i18n="status.passed">Passed</span></td></tr>
+      <tr><td>MOB-04</td><td data-i18n="test.app1">Send the game to the background during gameplay</td><td data-i18n="expected.app1">Pause menu opens automatically and gameplay stops</td><td><span class="status passed" data-i18n="status.passed">Passed</span></td></tr>
+      <tr><td>MOB-05</td><td data-i18n="test.input9">Run an Android build after progression or upgrade changes</td><td data-i18n="expected.input9">Car still responds to touch input with a valid movement speed</td><td><span class="status retest" data-i18n="status.retest">Needs Retest</span></td></tr>
+    </tbody>
+  </table></div></div>
 
-<div class="test-group"><h3>Wave & Level Flow</h3><div class="table-wrap"><table>
-<thead><tr><th>ID</th><th>Test</th><th>Expected Result</th><th>Status</th></tr></thead>
-<tbody>
-<tr><td>FLOW-01</td><td>[TODO — clear a normal wave]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
-<tr><td>FLOW-02</td><td>[TODO — transition from one wave to the next]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
-<tr><td>FLOW-03</td><td>[TODO — fail level during an active wave]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
-<tr><td>FLOW-04</td><td>[TODO — retry after level failure]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
-<tr><td>FLOW-05</td><td>[TODO — complete final wave and run outro]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
-<tr><td>FLOW-06</td><td>[TODO — return to overworld after completion]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
-</tbody></table></div></div>
+  <div class="test-group"><h3 data-i18n="coverage.flowTitle">Wave & Level Flow</h3><div class="table-wrap"><table>
+    <thead><tr><th>ID</th><th data-i18n="table.test">Test</th><th data-i18n="table.expected">Expected Result</th><th data-i18n="table.status">Status</th></tr></thead>
+    <tbody>
+      <tr><td>LVL-01</td><td data-i18n="test.flow1">Clear all bricks in a normal wave</td><td data-i18n="expected.flow1">Current wave completes and the next wave transition starts</td><td><span class="status passed" data-i18n="status.passed">Passed</span></td></tr>
+      <tr><td>LVL-02</td><td data-i18n="test.flow3">Enter a wave transition</td><td data-i18n="expected.flow3">A new shootable ball is not available before the transition finishes</td><td><span class="status retest" data-i18n="status.retest">Needs Retest</span></td></tr>
+      <tr><td>LVL-03</td><td data-i18n="test.flow4">Complete the final wave</td><td data-i18n="expected.flow4">Race timer stops, score and stars are calculated, and the level outro begins</td><td><span class="status passed" data-i18n="status.passed">Passed</span></td></tr>
+      <tr><td>LVL-04</td><td data-i18n="test.flow5">Complete the final wave with zero stars</td><td data-i18n="expected.flow5">Level is reported as failed instead of completed</td><td><span class="status passed" data-i18n="status.passed">Passed</span></td></tr>
+      <tr><td>LVL-05</td><td data-i18n="test.flow9">Finish the level-end dialogue and car drive-away</td><td data-i18n="expected.flow9">Level completes only after both asynchronous sequences finish</td><td><span class="status passed" data-i18n="status.passed">Passed</span></td></tr>
+      <tr><td>LVL-06</td><td data-i18n="test.flow10">Defeat an opponent vehicle and activate the next one during the same level</td><td data-i18n="expected.flow10">The defeated opponent can exit while the next opponent becomes active</td><td><span class="status passed" data-i18n="status.passed">Passed</span></td></tr>
+    </tbody>
+  </table></div></div>
 
-<div class="test-group"><h3>Progression & Upgrades</h3><div class="table-wrap"><table>
-<thead><tr><th>ID</th><th>Test</th><th>Expected Result</th><th>Status</th></tr></thead>
-<tbody>
-<tr><td>UPG-01</td><td>[TODO — purchase an upgrade]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
-<tr><td>UPG-02</td><td>[TODO — verify upgrade changes gameplay value]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
-<tr><td>UPG-03</td><td>[TODO — reload application and verify persistence]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
-<tr><td>UPG-04</td><td>[TODO — insufficient currency]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
-<tr><td>UPG-05</td><td>[TODO — verify upgraded car speed in gameplay]</td><td>[TODO]</td><td><span class="status">TODO</span></td></tr>
-</tbody></table></div></div>
+  <div class="test-group"><h3 data-i18n="coverage.progressionTitle">Progression & Upgrades</h3><div class="table-wrap"><table>
+    <thead><tr><th>ID</th><th data-i18n="table.test">Test</th><th data-i18n="table.expected">Expected Result</th><th data-i18n="table.status">Status</th></tr></thead>
+    <tbody>
+      <tr><td>PROG-01</td><td data-i18n="test.prog1">Purchase an upgrade in the shop</td><td data-i18n="expected.prog1">Upgrade level increases and its configured cost is deducted</td><td><span class="status passed" data-i18n="status.passed">Passed</span></td></tr>
+      <tr><td>PROG-02</td><td data-i18n="test.prog2">Restart or reload after purchasing an upgrade</td><td data-i18n="expected.prog2">Purchased upgrade level is restored from save data</td><td><span class="status passed" data-i18n="status.passed">Passed</span></td></tr>
+      <tr><td>PROG-03</td><td data-i18n="test.prog4">Upgrade car speed</td><td data-i18n="expected.prog4">Player movement uses the new CarSpeed value</td><td><span class="status retest" data-i18n="status.retestAndroid">Needs Retest on Android</span></td></tr>
+      <tr><td>PROG-04</td><td data-i18n="test.prog6">Start a level with zero overworld lives</td><td data-i18n="expected.prog6">The level cannot be started</td><td><span class="status passed" data-i18n="status.passed">Passed</span></td></tr>
+      <tr><td>PROG-05</td><td data-i18n="test.prog9">Press Retry from the Game Over screen</td><td data-i18n="expected.prog9">The level restarts without consuming a second overworld life</td><td><span class="status passed" data-i18n="status.passed">Passed</span></td></tr>
+    </tbody>
+  </table></div></div>
 </div></section>
 
 <section id="architecture" class="section"><div class="container">
-<div class="section-heading"><p class="eyebrow">TECHNICAL ARCHITECTURE</p><h2>Project Architecture</h2></div>
-<p class="lead">My Night Ride separates gameplay, progression, input, saving and level state into dedicated systems. The diagrams below show selected parts of the project architecture and how the main systems communicate.</p>
+  <div class="section-heading"><p class="eyebrow" data-i18n="architecture.eyebrow">TECHNICAL ARCHITECTURE</p><h2 data-i18n="architecture.title">Project Architecture</h2></div>
+  <p class="lead" data-i18n-html="architecture.lead">My Night Ride is split into focused gameplay and progression systems rather than concentrating behaviour in large MonoBehaviours. <code>GameServices</code> provides a central access point for shared systems, while <code>GameplaySceneInitializer</code> constructs, connects and tears down gameplay-scoped services.</p>
 
-<div class="cards">
-<article class="card"><h3>Input Separation</h3><p><code>GameplayInputRouter</code> handles mobile touch interpretation, while <code>PlayerController</code> applies car movement.</p></article>
-<article class="card"><h3>Progression Separation</h3><p><code>UpgradeService</code> reads persistent upgrade data and exposes gameplay values such as car speed, ball damage and starting ball count.</p></article>
-<article class="card"><h3>Gameplay State</h3><p><code>GameplayPauseService</code> owns pause state and broadcasts pause/resume events to other systems.</p></article>
-<article class="card"><h3>Level Flow Coordination</h3><p><code>LevelStateController</code> coordinates wave completion, dialogue, rival behaviour, race timing and level completion without implementing those systems directly.</p></article>
-</div>
+  <article class="architecture-block">
+    <div>
+      <h3 data-i18n="architecture.lifecycleTitle">Scene Lifecycle</h3>
+      <p data-i18n-html="architecture.lifecycleBody"><code>GameplaySceneInitializer</code> creates and connects gameplay services during scene setup, then explicitly unregisters observers, unbinds events, disposes the race timer and clears gameplay service references during teardown.</p>
+    </div>
+    <figure class="media-card uml-card"><img src="assets/images/uml-scene-lifecycle.png" alt="My Night Ride scene lifecycle UML class diagram" data-i18n-alt="media.umlServicesAlt" data-lightbox><figcaption data-i18n="architecture.lifecycleCaption">GameplaySceneInitializer, selected services, and GameServices access.</figcaption></figure>
+  </article>
 
-<article class="architecture-block">
-<div><h3>Services & Game State</h3><p>Dedicated services handle upgrades and progression, overworld lives, gameplay lives, ball management, rival cars, pause state, race timing, dialogue, save data and level state.</p><p>Global and scene-specific systems are exposed through <code>GameServices</code>. Gameplay services are created when the gameplay scene is initialized and cleaned up when it is destroyed.</p></div>
-<figure class="media-card uml-card"><img src="assets/images/uml-services.png" alt="My Night Ride service architecture diagram" data-lightbox><figcaption>Focused service architecture diagram.</figcaption></figure>
-</article>
+  <article class="architecture-block reverse">
+    <div>
+      <h3 data-i18n="architecture.persistenceTitle">Structured Persistence</h3>
+      <p data-i18n-html="architecture.persistenceBody">Runtime progression is held in a serializable <code>SaveData</code> model. <code>SaveService</code> converts it to JSON with <code>JsonUtility</code> and stores it through <code>PlayerPrefs</code>.</p>
+    </div>
+    <figure class="media-card uml-card"><img src="assets/images/uml-persistence.png" alt="My Night Ride persistence UML class diagram" data-i18n-alt="media.umlPersistenceAlt" data-lightbox><figcaption data-i18n="architecture.persistenceCaption">SaveService, SaveData, and the Unity persistence flow.</figcaption></figure>
+  </article>
 
-<article class="architecture-block reverse">
-<div><h3>Custom Update Flow</h3><p>Many systems implement observer interfaces such as <code>IUpdateObserver</code> and <code>IFixedUpdateObserver</code> and register with a shared <code>UpdateManager</code>, reducing reliance on individual Unity <code>Update()</code> methods.</p></div>
-<figure class="media-card uml-card"><img src="assets/images/uml-update-manager.png" alt="My Night Ride UpdateManager architecture diagram" data-lightbox><figcaption>Focused update-flow diagram.</figcaption></figure>
-</article>
+  <article class="architecture-block">
+    <div>
+      <h3 data-i18n="architecture.upgradesTitle">Data-Driven Upgrades</h3>
+      <p data-i18n-html="architecture.upgradesBody"><code>UpgradeDefinition</code> ScriptableObjects hold configurable costs, values and maximum levels. <code>UpgradeService</code> combines those definitions with the player's saved upgrade levels and exposes the resulting values to gameplay.</p>
+    </div>
+    <figure class="media-card uml-card"><img src="assets/images/uml-upgrades.png" alt="My Night Ride data-driven upgrades UML class diagram" data-i18n-alt="media.umlUpgradesAlt" data-lightbox><figcaption data-i18n="architecture.upgradesCaption">Upgrade definitions, saved levels, and runtime values.</figcaption></figure>
+  </article>
 
-<article class="architecture-block">
-<div><h3>Events & Async Sequences</h3><p>Gameplay state changes such as pausing, level completion, life loss, dialogue progression and rival events are communicated through events where appropriate.</p><p>UniTask is used for dialogue playback, wave transitions, level outros and car movement sequences.</p></div>
-<figure class="media-card uml-card"><img src="assets/images/uml-level-flow.png" alt="My Night Ride level-flow architecture diagram" data-lightbox><figcaption>Focused level-flow diagram.</figcaption></figure>
-</article>
+  <article class="architecture-block reverse">
+    <div>
+      <h3 data-i18n="architecture.asyncTitle">Async Level Flow</h3>
+      <p data-i18n-html="architecture.asyncBody"><code>LevelStateController</code> handles the final-wave branch, scoring and star calculation. When the level succeeds, dialogue and the player's drive-away run concurrently through <code>UniTask.WhenAll</code> before the <code>LevelCompleted</code> event is raised.</p>
+    </div>
+    <figure class="media-card uml-card"><img src="assets/images/uml-async-level-flow.png" alt="My Night Ride async level flow UML sequence diagram" data-i18n-alt="media.umlAsyncAlt" data-lightbox><figcaption data-i18n="architecture.asyncCaption">Final-wave completion and concurrent outro operations.</figcaption></figure>
+  </article>
 
-<div class="code-example"><p class="eyebrow">EXAMPLE</p><h3>Gameplay values through progression services</h3><pre><code>GameServices.Upgrades.GetFloatValue(UpgradeType.CarSpeed)</code></pre><p>Gameplay systems can read progression values without needing to know how upgrade data is stored internally.</p></div>
+  <div class="code-example"><p class="eyebrow" data-i18n="architecture.example">CONCRETE EXAMPLE</p><h3 data-i18n="architecture.exampleTitle">Gameplay reads the result, not the storage details</h3><pre><code>GameServices.Upgrades.GetFloatValue(UpgradeType.CarSpeed)</code></pre><p data-i18n="architecture.exampleBody">The movement controller can use the player's current car-speed value without needing to know how upgrade levels are configured, purchased or persisted.</p></div>
 </div></section>
 
 <section class="section alt project-status"><div class="container narrow">
-<p class="eyebrow">PROJECT STATUS</p><h2>Currently in Development</h2>
-<p class="lead">My Night Ride has working interconnected gameplay, progression and persistence systems, but the project is still actively being expanded and refined.</p>
-<p>Current development includes continued work on gameplay behaviour, system integration, mobile/Android behaviour, progression, level flow and polish.</p>
-<p>[TODO — add your current major milestone, next planned feature, or immediate development focus.]</p>
+  <p class="eyebrow" data-i18n="status.eyebrow">PROJECT STATUS</p><h2 data-i18n="status.title">Currently in Development</h2>
 </div></section>
 </main>
 
-<footer><div class="container footer-inner"><span>© <span id="year"></span> [YOUR NAME]</span><a href="#top">Back to top ↑</a></div></footer>
-<div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" aria-label="Close image viewer">×</button><img id="lightboxImage" alt=""></div>
+<footer><div class="container footer-inner"><span>© <span id="year"></span> [YOUR NAME]</span><a href="#top" data-i18n="footer.top">Back to top ↑</a></div></footer>
+<div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" aria-label="Close image viewer" data-i18n-aria-label="lightbox.close">×</button><img id="lightboxImage" alt=""></div>
 <script src="js/main.js"></script>
 </body>
 </html>
