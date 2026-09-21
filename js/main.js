@@ -14,7 +14,7 @@ const translations = {
     "meta.platform": "Platform",
     "meta.status": "Status",
     "meta.development": "In Development",
-    "intro.period": "Solo project • 2026 - Present",
+    "intro.period": "Solo project • 2026 – Present",
     "intro.button": "Explore the Project",
     "media.preview1Alt": "Core gameplay preview from My Night Ride",
     "media.preview2Alt": "Multi-wave and opponent vehicle gameplay preview from My Night Ride",
@@ -150,8 +150,9 @@ const translations = {
     "media.umlFlowAlt": "My Night Ride level completion flow diagram",
     "status.eyebrow": "PROJECT STATUS",
     "status.title": "Currently in Development",
+    "footer.name": "Dániel Bőcskei",
     "footer.top": "Back to top ↑",
-    "lightbox.close": "Close image viewer"
+    "lightbox.close": "Close image viewer",
   },
   "hu": {
     "pageTitle": "My Night Ride",
@@ -168,7 +169,7 @@ const translations = {
     "meta.platform": "Platform",
     "meta.status": "Állapot",
     "meta.development": "Fejlesztés alatt",
-    "intro.period": "Egyéni projekt • 2026 - jelenleg",
+    "intro.period": "Egyéni projekt • 2026 – jelenleg",
     "intro.button": "Projekt megtekintése",
     "media.preview1Alt": "A My Night Ride alap játékmenetének előnézete",
     "media.preview2Alt": "A My Night Ride hullámkra osztott játékmenetének és rivális járműveinek előnézete",
@@ -307,16 +308,62 @@ const translations = {
     "media.umlFlowAlt": "My Night Ride pályabefejezési folyamatábra",
     "status.eyebrow": "PROJEKT ÁLLAPOTA",
     "status.title": "Fejlesztés alatt",
+    "footer.name": "Bőcskei Dániel",
     "footer.top": "Vissza az elejére ↑",
     "lightbox.close": "Képnézegető bezárása"
   }
 };
 
 const year = document.getElementById("year");
-year.textContent = new Date().getFullYear();
+if (year) year.textContent = new Date().getFullYear();
 
-function setLanguage(language) {
-  const lang = translations[language] ? language : "en";
+function normalizeLanguage(value) {
+  if (!value) return null;
+  const normalized = String(value).toLowerCase();
+  if (normalized === "en" || normalized.startsWith("en-")) return "en";
+  if (normalized === "hu" || normalized.startsWith("hu-")) return "hu";
+  return null;
+}
+
+function detectBrowserLanguage() {
+  const languages = Array.isArray(navigator.languages) && navigator.languages.length
+    ? navigator.languages
+    : [navigator.language];
+
+  for (const language of languages) {
+    const normalized = normalizeLanguage(language);
+    if (normalized) return normalized;
+  }
+
+  return "en";
+}
+
+function getUrlLanguage() {
+  try {
+    return normalizeLanguage(new URLSearchParams(window.location.search).get("lang"));
+  } catch (_) {
+    return null;
+  }
+}
+
+function getStoredLanguage() {
+  try {
+    return normalizeLanguage(localStorage.getItem("mnr-language"));
+  } catch (_) {
+    return null;
+  }
+}
+
+function updateLanguageUrl(lang) {
+  try {
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", lang);
+    window.history.replaceState({}, "", url.toString());
+  } catch (_) {}
+}
+
+function setLanguage(language, updateUrl = true) {
+  const lang = normalizeLanguage(language) || "en";
   const dictionary = translations[lang];
 
   document.documentElement.lang = lang;
@@ -325,23 +372,31 @@ function setLanguage(language) {
   if (description) description.setAttribute("content", dictionary.pageDescription);
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
-    const key = element.dataset.i18n;
-    if (dictionary[key] !== undefined) element.textContent = dictionary[key];
+    const key = element.getAttribute("data-i18n");
+    if (key && Object.prototype.hasOwnProperty.call(dictionary, key)) {
+      element.textContent = dictionary[key];
+    }
   });
 
   document.querySelectorAll("[data-i18n-html]").forEach((element) => {
-    const key = element.dataset.i18nHtml;
-    if (dictionary[key] !== undefined) element.innerHTML = dictionary[key];
+    const key = element.getAttribute("data-i18n-html");
+    if (key && Object.prototype.hasOwnProperty.call(dictionary, key)) {
+      element.innerHTML = dictionary[key];
+    }
   });
 
   document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
-    const key = element.dataset.i18nAlt;
-    if (dictionary[key] !== undefined) element.setAttribute("alt", dictionary[key]);
+    const key = element.getAttribute("data-i18n-alt");
+    if (key && Object.prototype.hasOwnProperty.call(dictionary, key)) {
+      element.setAttribute("alt", dictionary[key]);
+    }
   });
 
   document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
-    const key = element.dataset.i18nAriaLabel;
-    if (dictionary[key] !== undefined) element.setAttribute("aria-label", dictionary[key]);
+    const key = element.getAttribute("data-i18n-aria-label");
+    if (key && Object.prototype.hasOwnProperty.call(dictionary, key)) {
+      element.setAttribute("aria-label", dictionary[key]);
+    }
   });
 
   document.querySelectorAll(".language-button").forEach((button) => {
@@ -351,15 +406,15 @@ function setLanguage(language) {
   });
 
   try { localStorage.setItem("mnr-language", lang); } catch (_) {}
+  if (updateUrl) updateLanguageUrl(lang);
 }
 
 document.querySelectorAll(".language-button").forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.language));
 });
 
-let initialLanguage = "en";
-try { initialLanguage = localStorage.getItem("mnr-language") || "en"; } catch (_) {}
-setLanguage(initialLanguage);
+const initialLanguage = getUrlLanguage() || getStoredLanguage() || detectBrowserLanguage();
+setLanguage(initialLanguage, false);
 
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightboxImage");

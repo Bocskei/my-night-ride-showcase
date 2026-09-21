@@ -22,6 +22,7 @@ a { color:inherit; }
 .language-button:hover { color:var(--text); }
 .language-button.active { background:var(--surface-2); color:var(--text); box-shadow:0 0 0 1px rgba(110,231,255,.22) inset; }
 .flag { font-size:1rem; line-height:1; }
+.flag-icon { display:block; flex:0 0 auto; width:20px; height:12px; }
 .section { padding:92px 0; }
 .alt { background:var(--bg-alt); }
 .project-intro { padding-top:76px; }
