@@ -164,7 +164,7 @@ const translations = {
     "nav.architecture": "Architektúra",
     "intro.eyebrow": "JÁTÉKPROJEKT BEMUTATÓ",
     "intro.summary": "Mobil arkádjáték érintésvezérelt autóirányítással, labdás akadályrombolással, időre teljesítendő pályákkal és tartós fejlesztési rendszerrel.",
-    "meta.engine": "Motor",
+    "meta.engine": "Engine",
     "meta.language": "Nyelv",
     "meta.platform": "Platform",
     "meta.status": "Állapot",
