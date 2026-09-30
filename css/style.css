@@ -60,6 +60,7 @@ figcaption { padding:12px 16px; color:var(--muted); font-size:.85rem; text-align
 table { width:100%; min-width:760px; border-collapse:collapse; background:var(--surface); }
 th,td { padding:16px 18px; text-align:left; border-bottom:1px solid var(--border); }
 th { background:var(--surface-2); font-size:.82rem; text-transform:uppercase; }
+th:first-child, td:first-child, th:last-child, td:last-child { white-space:nowrap; }
 td { color:var(--muted); }
 .status { display:inline-flex; padding:5px 9px; border-radius:999px; font-size:.72rem; font-weight:900; background:var(--todo); color:#2b1e00; }
 .architecture-block { margin-top:64px; }
@@ -100,4 +101,17 @@ pre { overflow-x:auto; padding:18px; background:#080a0d; border-radius:12px; }
   .footer-inner { flex-direction:column; }
   .language-button span:last-child { display:none; }
   .language-button { padding:7px 9px; }
+}
+
+/* Test result status colours */
+.status.passed {
+  background: rgba(46, 204, 113, .16) !important;
+  color: #62e89a !important;
+  border: 1px solid rgba(46, 204, 113, .35) !important;
+}
+
+.status.retest {
+  background: rgba(245, 166, 35, .16) !important;
+  color: #ffbe55 !important;
+  border: 1px solid rgba(245, 166, 35, .35) !important;
 }

@@ -171,29 +171,21 @@
 
   <article class="architecture-block">
     <div>
-      <h3 data-i18n="architecture.lifecycleTitle">Scene Lifecycle</h3>
-      <p data-i18n-html="architecture.lifecycleBody"><code>GameplaySceneInitializer</code> creates and connects gameplay services during scene setup, then explicitly unregisters observers, unbinds events, disposes the race timer and clears gameplay service references during teardown.</p>
+      <h3 data-i18n="architecture.updateTitle">Update Architecture</h3>
+      <p data-i18n-html="architecture.updateBody"><code>IUpdateObserver</code> and <code>IFixedUpdateObserver</code> systems register with a central <code>UpdateManager</code> for per-frame and physics updates. This keeps update callbacks explicit and lets systems register only for the update type they need.</p>
     </div>
-    <figure class="media-card uml-card"><img src="assets/images/uml-scene-lifecycle.png" alt="My Night Ride scene lifecycle UML class diagram" data-i18n-alt="media.umlServicesAlt" data-lightbox><figcaption data-i18n="architecture.lifecycleCaption">GameplaySceneInitializer, selected services, and GameServices access.</figcaption></figure>
+    <figure class="media-card uml-card"><img src="assets/images/uml-update-architecture.png" alt="My Night Ride centralized update architecture diagram" data-i18n-alt="media.umlUpdateAlt" data-lightbox><figcaption data-i18n="architecture.updateCaption">UpdateManager, observer interfaces, and per-frame or fixed-update registration.</figcaption></figure>
   </article>
 
   <article class="architecture-block reverse">
     <div>
-      <h3 data-i18n="architecture.persistenceTitle">Structured Persistence</h3>
-      <p data-i18n-html="architecture.persistenceBody">Runtime progression is held in a serializable <code>SaveData</code> model. <code>SaveService</code> converts it to JSON with <code>JsonUtility</code> and stores it through <code>PlayerPrefs</code>.</p>
+      <h3 data-i18n="architecture.lifecycleTitle">Scene Lifecycle</h3>
+      <p data-i18n-html="architecture.lifecycleBody"><code>GameplaySceneInitializer</code> creates and connects gameplay services during scene setup, then explicitly unregisters observers, unbinds events, disposes the race timer and clears service references during teardown.</p>
     </div>
-    <figure class="media-card uml-card"><img src="assets/images/uml-persistence.png" alt="My Night Ride persistence UML class diagram" data-i18n-alt="media.umlPersistenceAlt" data-lightbox><figcaption data-i18n="architecture.persistenceCaption">SaveService, SaveData, and the Unity persistence flow.</figcaption></figure>
+    <figure class="media-card uml-card"><img src="assets/images/uml-scene-lifecycle.png" alt="My Night Ride scene lifecycle architecture diagram" data-i18n-alt="media.umlServicesAlt" data-lightbox><figcaption data-i18n="architecture.lifecycleCaption">GameplaySceneInitializer, created services, and GameServices access.</figcaption></figure>
   </article>
 
   <article class="architecture-block">
-    <div>
-      <h3 data-i18n="architecture.upgradesTitle">Data-Driven Upgrades</h3>
-      <p data-i18n-html="architecture.upgradesBody"><code>UpgradeDefinition</code> ScriptableObjects hold configurable costs, values and maximum levels. <code>UpgradeService</code> combines those definitions with the player's saved upgrade levels and exposes the resulting values to gameplay.</p>
-    </div>
-    <figure class="media-card uml-card"><img src="assets/images/uml-upgrades.png" alt="My Night Ride data-driven upgrades UML class diagram" data-i18n-alt="media.umlUpgradesAlt" data-lightbox><figcaption data-i18n="architecture.upgradesCaption">Upgrade definitions, saved levels, and runtime values.</figcaption></figure>
-  </article>
-
-  <article class="architecture-block reverse">
     <div>
       <h3 data-i18n="architecture.asyncTitle">Async Level Flow</h3>
       <p data-i18n-html="architecture.asyncBody"><code>LevelStateController</code> handles the final-wave branch, scoring and star calculation. When the level succeeds, dialogue and the player's drive-away run concurrently through <code>UniTask.WhenAll</code> before the <code>LevelCompleted</code> event is raised.</p>
